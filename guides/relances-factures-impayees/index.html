@@ -1,0 +1,72 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Relancer ses factures impayées automatiquement : guide pas à pas | NEXIA</title><meta name="description" content="À qui s&#x27;adresse ce guide. Aux dirigeants de TPE et PME, aux indépendants et aux artisans qui facturent leurs clients et doivent relancer les impayés…">
+<link rel="canonical" href="https://nexia-code.github.io/guides/relances-factures-impayees/"><meta property="og:title" content="Relancer ses factures impayées automatiquement : guide pas à pas | NEXIA"><meta property="og:description" content="À qui s&#x27;adresse ce guide. Aux dirigeants de TPE et PME, aux indépendants et aux artisans qui facturent leurs clients et doivent relancer les impayés…">
+<style>*{box-sizing:border-box}body{margin:0;font:17px/1.7 -apple-system,'Helvetica Neue',Arial,sans-serif;color:#1E293B;background:#F8FAFC}
+header{background:#0F172A;color:#fff;padding:18px 20px}header a{color:#fff;text-decoration:none;font-weight:700;letter-spacing:.3em}
+.chip{background:#3B82F6;border-radius:6px;padding:5px 12px}main{max-width:760px;margin:0 auto;padding:28px 18px 60px}
+h1{font-size:2rem;line-height:1.2;color:#0F172A}h2{color:#0F172A;margin-top:2.2em;border-bottom:3px solid #3B82F6;padding-bottom:.2em}
+h3{color:#1D4ED8}blockquote{background:#EFF6FF;border-left:4px solid #3B82F6;margin:1em 0;padding:.6em 1em;border-radius:0 8px 8px 0}
+code{background:#F1F5F9;padding:1px 5px;border-radius:4px;font-size:.9em}pre{background:#0F172A;color:#E2E8F0;padding:14px;border-radius:8px;white-space:pre-wrap}
+pre code{background:none;color:inherit}.cta{background:#0F172A;color:#fff;border-radius:14px;padding:22px;margin:2.5em 0}
+.cta a{display:inline-block;background:#3B82F6;color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;margin-top:8px}
+.carte{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:18px;margin:14px 0}.carte a{color:#1D4ED8;font-weight:700;text-decoration:none;font-size:1.1em}
+main{overflow-wrap:anywhere}pre,table{max-width:100%;overflow-x:auto}header{white-space:normal}
+footer{color:#64748B;font-size:.85em;text-align:center;padding:30px 18px}</style></head><body><header><a href="/"><span class="chip">N E X I A</span></a> &nbsp; l'IA pratique pour les petites entreprises</header>
+<main><h1>Relancer ses factures impayées automatiquement : Ne perdez plus une facture impayée</h1><p><em>Extrait offert du guide NEXIA : présentation et niveau 1 en entier.</em></p><div class="cta"><b>Vous avez le niveau 1. La suite est dans le guide complet.</b><br>Niveaux 2 et 3 pas à pas, consignes IA prêtes à copier, glossaire, récapitulatif sur une page. PDF, 20 €.<br><a href="https://nexiapro.gumroad.com/l/relances-factures-impayees?utm_source=site&utm_medium=article">Obtenir le guide complet</a></div><h2>Avant de commencer</h2>
+<p><strong>À qui s'adresse ce guide.</strong> Aux dirigeants de TPE et PME, aux indépendants et aux artisans qui facturent leurs clients et doivent relancer les impayés eux-mêmes, sans service comptable dédié. La relance, quand elle est manuelle, se fait toujours trop tard : on s'en souvient trois semaines après l'échéance, au pire moment, avec un ton qui trahit l'agacement plus que la fermeté professionnelle. Aucune compétence technique requise, aucune ligne de code.</p>
+<p><strong>Ce que vous aurez à la fin.</strong> Trois niveaux indépendants :</p>
+<ol>
+<li><strong>Niveau 1 (20 minutes de mise en place)</strong> : un tableau centralisé de toutes vos factures en attente de paiement, avec leur échéance, à un seul endroit, fini le mélange entre votre logiciel de facturation, vos emails et votre mémoire.</li>
+<li><strong>Niveau 2 (30 minutes)</strong> : trois relances automatiques, rédigées par l'IA avec un ton qui monte progressivement (rappel courtois à J+7, relance ferme à J+15, mise en demeure amiable à J+30), envoyées sans que vous ayez à y penser.</li>
+<li><strong>Niveau 3 (30 minutes)</strong> : un tableau de bord des impayés consultable en un clic, avec une alerte dès qu'un client dépasse un seuil de retard ou de montant que vous définissez.</li>
+</ol>
+<p><strong>Combien de temps vous pouvez en attendre.</strong> À titre d'estimation, sur un scénario type : le temps de rédaction et d'envoi manuel des relances (souvent 10 à 20 minutes par facture en retard, sans compter le temps passé à s'en souvenir) ramené à quelques secondes de vérification par semaine. Le vrai gain, au-delà du temps : des relances envoyées systématiquement à la bonne date, jamais oubliées, jamais 3 semaines trop tard. Ce sont des estimations : votre gain dépend de votre volume de facturation.</p>
+<p><strong>Ce dont vous avez besoin.</strong></p>
+<ul>
+<li>Un ordinateur, une adresse email professionnelle</li>
+<li>Vos factures en cours : peu importe leur origine (logiciel de facturation, factures Word, factures papier saisies à la main), l'essentiel est de pouvoir lister client, montant, date d'échéance</li>
+<li>Budget : 0 € pour démarrer, quelques euros par mois si votre volume grandit (détaillé au fil du guide)</li>
+</ul>
+<p><strong>Ce que ce guide n'est pas.</strong> Un conseil juridique sur le recouvrement de créances. Les modèles de relance de ce guide restent dans le registre commercial et amiable ; au-delà de 30 à 45 jours de retard sans réponse, la mise en demeure formelle et, le cas échéant, la procédure de recouvrement relèvent de votre expert-comptable ou d'un professionnel du droit, pas de ce guide.</p>
+<p><strong>Comment lire ce guide.</strong> Manipulations numérotées, points de contrôle « Vous devez voir », encadrés « Si ça ne marche pas », glossaire final. Chaque niveau est autonome : commencez par celui qui répond à votre besoin le plus pressant.</p>
+<hr />
+<h2>Chapitre 1. Comprendre en 3 minutes</h2>
+<h2>1.1 Pourquoi la relance manuelle échoue presque toujours</h2>
+<p>Trois causes reviennent systématiquement :</p>
+<ul>
+<li><strong>L'oubli</strong> : sans système, la relance dépend de la mémoire, or l'attention se porte toujours sur l'urgence du jour, jamais sur la facture du mois dernier.</li>
+<li><strong>Le ton mal calibré</strong> : une première relance trop dure abîme la relation client ; une troisième relance trop molle ne produit aucun effet. Le bon ton dépend du nombre de jours de retard, pas de l'humeur du moment.</li>
+<li><strong>Le temps de rédaction</strong> : rédiger un email de relance correctement formulé prend du temps que l'on remet toujours à plus tard.</li>
+</ul>
+<p>L'automatisation no-code et l'IA résolvent exactement ces trois causes : le système ne relance jamais en retard, le ton est calibré une fois pour toutes selon le nombre de jours, et la rédaction est instantanée.</p>
+<h2>1.2 Les outils du guide</h2>
+<p><strong>Google Sheets</strong> : le tableur de Google, gratuit, qui sert de tableau centralisé de vos factures.</p>
+<p><strong>Make</strong> : le chef d'orchestre qui vérifie chaque jour les échéances et déclenche les relances au bon moment. Plan gratuit suffisant pour ce guide.</p>
+<p><strong>Claude</strong> : l'IA qui rédige chaque relance avec le ton adapté à son niveau, utilisée via son API (une « prise » pour logiciels, quelques euros de crédit pour plusieurs mois d'usage).</p>
+<h2>1.3 L'avertissement honnête du guide</h2>
+<p>Une relance automatique n'est utile que si le tableau des factures est tenu à jour : si un client a payé et que la ligne n'est pas marquée « Payé », l'automatisation enverra une relance à tort. Le chapitre 2 est conçu pour que cette mise à jour prenne quelques secondes, précisément pour que cette discipline soit tenable dans la durée. Vérifiez toujours, avant d'activer un scénario, qu'il fonctionne sur un cas test plutôt que sur vos vrais clients.</p>
+<hr />
+<h2>Chapitre 2. Niveau 1 : le tableau centralisé de vos factures (20 minutes)</h2>
+<h2>2.1 Créer votre feuille de suivi</h2>
+<ol>
+<li>Créez un Google Sheets nommé « Suivi factures [votre entreprise] »</li>
+<li>Créez ces colonnes : <strong>Client</strong>, <strong>Email client</strong>, <strong>Numéro de facture</strong>, <strong>Montant</strong>, <strong>Date d'échéance</strong>, <strong>Statut</strong> (à créer en liste déroulante : « En attente », « Relance 1 envoyée », « Relance 2 envoyée », « Relance 3 envoyée », « Payé », « Litige »), <strong>Dernière relance le</strong></li>
+<li>Pour la colonne Statut, sélectionnez la colonne puis Données &gt; Validation des données &gt; Liste déroulante, et entrez les 6 valeurs ci-dessus</li>
+</ol>
+<blockquote>
+<p><strong>Vous devez voir</strong> : une feuille avec vos colonnes et un menu déroulant propre dans la colonne Statut, sans texte libre qui pourrait varier d'une ligne à l'autre.</p>
+</blockquote>
+<h2>2.2 Alimenter le tableau</h2>
+<ul>
+<li><strong>Si votre logiciel de facturation exporte en CSV ou Excel</strong> : importez directement l'export dans un onglet séparé, puis copiez les colonnes utiles dans votre feuille de suivi. Beaucoup de logiciels de facturation français permettent aussi un export automatique périodique : vérifiez dans leur aide.</li>
+<li><strong>Si vous facturez avec un simple document Word ou papier</strong> : ajoutez chaque facture à la main au moment de son émission, 30 secondes par ligne. C'est la version la plus honnête pour démarrer.</li>
+</ul>
+<h2>2.3 La règle d'or : une ligne = une facture, un statut à jour</h2>
+<ol>
+<li>Dès qu'un paiement arrive (virement, chèque, prélèvement), ouvrez la ligne correspondante et passez son statut à « Payé » avant toute autre tâche : c'est le geste qui protège vos clients d'une relance envoyée à tort</li>
+<li>Une fois par semaine, à un créneau fixe, parcourez la colonne Statut pour vérifier qu'aucune ligne n'est restée oubliée</li>
+</ol>
+<blockquote>
+<p><strong>Vous devez voir</strong> : à tout moment, un coup d'œil à la feuille vous dit exactement qui doit encore payer, combien, et depuis quand.</p>
+<p><strong>Si ça ne marche pas</strong> : si vous avez plusieurs personnes qui facturent ou encaissent, désignez une seule responsable de la mise à jour du statut « Payé » : deux personnes qui pensent chacune que l'autre s'en charge est la cause la plus fréquente d'un tableau qui se désynchronise.</p>
+</blockquote><div class="cta"><b>Vous avez le niveau 1. La suite est dans le guide complet.</b><br>Niveaux 2 et 3 pas à pas, consignes IA prêtes à copier, glossaire, récapitulatif sur une page. PDF, 20 €.<br><a href="https://nexiapro.gumroad.com/l/relances-factures-impayees?utm_source=site&utm_medium=article">Obtenir le guide complet</a></div></main><footer>NEXIA, guides pratiques pour TPE, PME et indépendants. Les gains de temps indiqués sont des estimations sur des scénarios types.</footer></body></html>

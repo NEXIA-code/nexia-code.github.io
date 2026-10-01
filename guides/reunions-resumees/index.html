@@ -1,0 +1,85 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Compte rendu de réunion automatique avec l&#x27;IA : guide pas à pas | NEXIA</title><meta name="description" content="À qui s&#x27;adresse ce guide. À toute personne qui passe plus de 3 heures par semaine en réunion (au bureau ou en visio) et qui en ressort avec des notes…">
+<link rel="canonical" href="https://nexia-code.github.io/guides/reunions-resumees/"><meta property="og:title" content="Compte rendu de réunion automatique avec l&#x27;IA : guide pas à pas | NEXIA"><meta property="og:description" content="À qui s&#x27;adresse ce guide. À toute personne qui passe plus de 3 heures par semaine en réunion (au bureau ou en visio) et qui en ressort avec des notes…">
+<style>*{box-sizing:border-box}body{margin:0;font:17px/1.7 -apple-system,'Helvetica Neue',Arial,sans-serif;color:#1E293B;background:#F8FAFC}
+header{background:#0F172A;color:#fff;padding:18px 20px}header a{color:#fff;text-decoration:none;font-weight:700;letter-spacing:.3em}
+.chip{background:#3B82F6;border-radius:6px;padding:5px 12px}main{max-width:760px;margin:0 auto;padding:28px 18px 60px}
+h1{font-size:2rem;line-height:1.2;color:#0F172A}h2{color:#0F172A;margin-top:2.2em;border-bottom:3px solid #3B82F6;padding-bottom:.2em}
+h3{color:#1D4ED8}blockquote{background:#EFF6FF;border-left:4px solid #3B82F6;margin:1em 0;padding:.6em 1em;border-radius:0 8px 8px 0}
+code{background:#F1F5F9;padding:1px 5px;border-radius:4px;font-size:.9em}pre{background:#0F172A;color:#E2E8F0;padding:14px;border-radius:8px;white-space:pre-wrap}
+pre code{background:none;color:inherit}.cta{background:#0F172A;color:#fff;border-radius:14px;padding:22px;margin:2.5em 0}
+.cta a{display:inline-block;background:#3B82F6;color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;margin-top:8px}
+.carte{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:18px;margin:14px 0}.carte a{color:#1D4ED8;font-weight:700;text-decoration:none;font-size:1.1em}
+main{overflow-wrap:anywhere}pre,table{max-width:100%;overflow-x:auto}header{white-space:normal}
+footer{color:#64748B;font-size:.85em;text-align:center;padding:30px 18px}</style></head><body><header><a href="/"><span class="chip">N E X I A</span></a> &nbsp; l'IA pratique pour les petites entreprises</header>
+<main><h1>Compte rendu de réunion automatique avec l&#x27;IA : Vos réunions se résument toutes seules</h1><p><em>Extrait offert du guide NEXIA : présentation et niveau 1 en entier.</em></p><div class="cta"><b>Vous avez le niveau 1. La suite est dans le guide complet.</b><br>Niveaux 2 et 3 pas à pas, consignes IA prêtes à copier, glossaire, récapitulatif sur une page. PDF, 20 €.<br><a href="https://nexiapro.gumroad.com/l/reunions-resumees?utm_source=site&utm_medium=article">Obtenir le guide complet</a></div><h2>Avant de commencer</h2>
+<p><strong>À qui s'adresse ce guide.</strong> À toute personne qui passe plus de 3 heures par semaine en réunion (au bureau ou en visio) et qui en ressort avec des notes éparses, des décisions floues et des actions oubliées. Aucune compétence technique requise : si vous savez rejoindre une réunion Zoom ou Teams, vous savez tout ce qu'il faut.</p>
+<p><strong>Ce que vous aurez à la fin.</strong> Trois systèmes indépendants, du plus simple au plus complet :</p>
+<ol>
+<li><strong>Niveau 1 (20 minutes de mise en place)</strong> : chaque réunion en visio est transcrite et résumée automatiquement. À la fin, vous recevez le résumé, les décisions prises et les actions de chacun, sans avoir pris une note.</li>
+<li><strong>Niveau 2 (10 minutes)</strong> : vos notes manuscrites ou brouillonnes de n'importe quelle réunion deviennent un compte-rendu professionnel en 30 secondes.</li>
+<li><strong>Niveau 3 (30 minutes)</strong> : les actions décidées en réunion (« Pierre envoie le devis vendredi ») deviennent automatiquement des tâches dans votre outil de suivi, sans ressaisie.</li>
+</ol>
+<p>En bonus : la méthode pour produire une présentation propre en 20 minutes au lieu de 2 heures.</p>
+<p><strong>Combien de temps vous pouvez en attendre.</strong> À titre d'estimation : si une réunion vous coûte aujourd'hui 45 minutes de prise de notes et 30 minutes de rédaction de compte-rendu, le niveau 1 ramène ce total à environ 5 minutes de relecture. Sur 3 à 4 réunions par semaine, cela représente plusieurs heures récupérées. C'est une estimation sur un scénario type, pas une promesse : tout dépend de votre volume de réunions.</p>
+<p><strong>Ce dont vous avez besoin.</strong></p>
+<ul>
+<li>Des réunions en visioconférence (Zoom, Google Meet ou Teams) pour le niveau 1 ; les niveaux 2 et 3 marchent aussi pour les réunions en présentiel</li>
+<li>Un ordinateur avec un navigateur</li>
+<li>Budget : 0 € pour démarrer (les plans gratuits suffisent), environ 5 € par mois si vous ajoutez le niveau 3</li>
+</ul>
+<p><strong>Comment lire ce guide.</strong> Chaque manipulation est numérotée, suivie d'un point de contrôle « Vous devez voir » et d'un encadré « Si ça ne marche pas ». Les mots techniques sont définis à leur première apparition et regroupés au glossaire. Chaque niveau fonctionne seul : vous pouvez vous arrêter où vous voulez.</p>
+<p><strong>Une règle avant de commencer, et elle n'est pas optionnelle : prévenez toujours les participants qu'un outil enregistre et transcrit la réunion.</strong> C'est une obligation légale (les participants doivent pouvoir s'y opposer) et une question de confiance. Une phrase suffit en début de réunion : « J'utilise un assistant qui transcrit nos échanges pour le compte-rendu, est-ce que ça convient à tout le monde ? » La plupart des outils affichent d'ailleurs leur présence à l'écran.</p>
+<hr />
+<h2>Chapitre 1. Comprendre en 3 minutes</h2>
+<h2>1.1 Pourquoi les réunions coûtent si cher</h2>
+<p>Le coût d'une réunion ne s'arrête pas à sa durée. Il y a l'avant (préparer), le pendant (prendre des notes en écoutant à moitié) et l'après (rédiger le compte-rendu, l'envoyer, se souvenir de qui devait faire quoi). C'est ce « pendant » et cet « après » que l'IA prend en charge : vous restez concentré sur la discussion, la machine s'occupe de la mémoire.</p>
+<h2>1.2 Les outils que nous allons utiliser</h2>
+<p><strong>Fireflies</strong> : un assistant qui rejoint vos réunions en visio comme un participant invisible. Il transcrit tout, puis génère automatiquement un résumé, la liste des décisions et les actions par personne. C'est le pilier du niveau 1. Son plan gratuit couvre 800 minutes de transcription par mois (constaté en juillet 2026), soit une douzaine de réunions d'une heure.</p>
+<p><strong>Claude</strong> : une intelligence artificielle qui lit et écrit du texte. C'est elle qui transforme vos notes brouillonnes en compte-rendu (niveau 2). Le site claude.ai est gratuit.</p>
+<p><strong>Make</strong> : le chef d'orchestre du niveau 3, qui relie Fireflies à votre outil de tâches sans une ligne de code. Plan gratuit largement suffisant.</p>
+<p><strong>Notion</strong> (ou votre outil de tâches habituel) : là où les actions décidées en réunion atterrissent automatiquement.</p>
+<h2>1.3 Le principe de sécurité du guide</h2>
+<p>Comme dans tous les guides NEXIA : <strong>l'IA prépare, vous validez.</strong> Un résumé automatique se relit avant d'être diffusé (il peut se tromper sur un chiffre ou attribuer une phrase à la mauvaise personne), et aucun compte-rendu ne part vers un client sans votre relecture.</p>
+<hr />
+<h2>Chapitre 2. Niveau 1 : vos réunions transcrites et résumées toutes seules (20 minutes)</h2>
+<h2>2.1 Créer votre compte Fireflies</h2>
+<ol>
+<li>Allez sur <strong>fireflies.ai</strong> et créez un compte avec l'adresse email que vous utilisez pour vos réunions (c'est important : c'est comme ça qu'il saura quelles réunions rejoindre)</li>
+<li>Autorisez l'accès à votre calendrier (Google Calendar ou Outlook) quand il le propose</li>
+</ol>
+<blockquote>
+<p><strong>Vous devez voir</strong> : un tableau de bord Fireflies, et dans les réglages, votre calendrier connecté.</p>
+<p><strong>Si ça ne marche pas</strong> : si vous n'utilisez pas de calendrier en ligne, pas de blocage : Fireflies peut aussi être invité manuellement à chaque réunion (on le voit au point 2.2).</p>
+</blockquote>
+<h2>2.2 Régler qui il rejoint (le réglage qui évite les surprises)</h2>
+<p>Par défaut, Fireflies peut vouloir rejoindre TOUTES vos réunions. Réglez-le une fois pour toutes :</p>
+<ol>
+<li>Ouvrez les <strong>Settings</strong> (réglages) de Fireflies</li>
+<li>Cherchez la règle de participation aux réunions (« Fred joins... » ; Fred est le surnom de leur assistant)</li>
+<li>Trois choix possibles : toutes les réunions, seulement celles que vous possédez, ou seulement sur invitation manuelle. <strong>Notre recommandation : sur invitation, au début.</strong> Vous gardez le contrôle total.</li>
+<li>Pour inviter Fireflies à une réunion précise : ajoutez simplement <strong>fred@fireflies.ai</strong> dans les invités de l'événement de calendrier, comme un participant normal.</li>
+</ol>
+<p>Réglez aussi la <strong>langue de transcription</strong> sur le français dans les réglages (sinon la transcription d'une réunion en français sera médiocre).</p>
+<blockquote>
+<p><strong>Vous devez voir</strong> : dans les réglages, votre règle de participation choisie et la langue française sélectionnée.</p>
+</blockquote>
+<h2>2.3 Votre première réunion transcrite</h2>
+<ol>
+<li>Planifiez une réunion de test (même 10 minutes avec un collègue, ou vous-même depuis deux appareils)</li>
+<li>Ajoutez fred@fireflies.ai aux invités</li>
+<li>Tenez la réunion normalement : l'assistant apparaît comme un participant nommé Fireflies</li>
+<li>Quelques minutes après la fin, ouvrez votre email</li>
+</ol>
+<blockquote>
+<p><strong>Vous devez voir</strong> : un email de Fireflies avec le résumé de la réunion, les points clés, et la transcription complète accessible en ligne. Dans la transcription, chaque phrase est attribuée à son locuteur avec l'horodatage.</p>
+<p><strong>Si ça ne marche pas</strong> : si l'assistant n'a pas rejoint, vérifiez que l'invitation contenait bien le lien de visio (c'est ce lien qu'il utilise pour entrer) et que votre règle de participation ne l'exclut pas. S'il a rejoint mais la transcription est mauvaise, vérifiez la langue (point 2.2) et la qualité du micro : l'IA transcrit ce qu'elle entend.</p>
+</blockquote>
+<h2>2.4 La routine du niveau 1</h2>
+<p>Après chaque réunion : ouvrez le résumé (2 minutes), vérifiez les décisions et les actions listées, corrigez si besoin, et transférez-le aux participants. Vous venez de remplacer 30 à 45 minutes de rédaction par 5 minutes de relecture.</p>
+<p><strong>Trois précisions honnêtes :</strong></p>
+<ul>
+<li>La transcription n'est jamais parfaite à 100 %, surtout avec des noms propres, des accents marqués ou un mauvais micro. Elle est largement suffisante pour un compte-rendu, pas pour un procès-verbal juridique.</li>
+<li>Le plan gratuit limite le volume mensuel : si vous dépassez, les plans payants démarrent autour de 10 à 18 $ par mois (tarifs constatés juillet 2026).</li>
+<li>Pour les réunions confidentielles ou sensibles, posez-vous la question avant d'inviter l'assistant : la transcription transite par les serveurs de Fireflies. En cas de doute, niveau 2 (notes manuelles) plutôt que niveau 1.</li>
+</ul><div class="cta"><b>Vous avez le niveau 1. La suite est dans le guide complet.</b><br>Niveaux 2 et 3 pas à pas, consignes IA prêtes à copier, glossaire, récapitulatif sur une page. PDF, 20 €.<br><a href="https://nexiapro.gumroad.com/l/reunions-resumees?utm_source=site&utm_medium=article">Obtenir le guide complet</a></div></main><footer>NEXIA, guides pratiques pour TPE, PME et indépendants. Les gains de temps indiqués sont des estimations sur des scénarios types.</footer></body></html>

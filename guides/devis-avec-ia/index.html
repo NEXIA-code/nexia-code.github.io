@@ -1,0 +1,89 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Faire ses devis avec l&#x27;IA : guide pas à pas | NEXIA</title><meta name="description" content="À qui s&#x27;adresse ce guide. Aux artisans, indépendants, consultants et dirigeants de petites entreprises qui rédigent eux-mêmes leurs devis et leurs…">
+<link rel="canonical" href="https://nexia-code.github.io/guides/devis-avec-ia/"><meta property="og:title" content="Faire ses devis avec l&#x27;IA : guide pas à pas | NEXIA"><meta property="og:description" content="À qui s&#x27;adresse ce guide. Aux artisans, indépendants, consultants et dirigeants de petites entreprises qui rédigent eux-mêmes leurs devis et leurs…">
+<style>*{box-sizing:border-box}body{margin:0;font:17px/1.7 -apple-system,'Helvetica Neue',Arial,sans-serif;color:#1E293B;background:#F8FAFC}
+header{background:#0F172A;color:#fff;padding:18px 20px}header a{color:#fff;text-decoration:none;font-weight:700;letter-spacing:.3em}
+.chip{background:#3B82F6;border-radius:6px;padding:5px 12px}main{max-width:760px;margin:0 auto;padding:28px 18px 60px}
+h1{font-size:2rem;line-height:1.2;color:#0F172A}h2{color:#0F172A;margin-top:2.2em;border-bottom:3px solid #3B82F6;padding-bottom:.2em}
+h3{color:#1D4ED8}blockquote{background:#EFF6FF;border-left:4px solid #3B82F6;margin:1em 0;padding:.6em 1em;border-radius:0 8px 8px 0}
+code{background:#F1F5F9;padding:1px 5px;border-radius:4px;font-size:.9em}pre{background:#0F172A;color:#E2E8F0;padding:14px;border-radius:8px;white-space:pre-wrap}
+pre code{background:none;color:inherit}.cta{background:#0F172A;color:#fff;border-radius:14px;padding:22px;margin:2.5em 0}
+.cta a{display:inline-block;background:#3B82F6;color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;margin-top:8px}
+.carte{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:18px;margin:14px 0}.carte a{color:#1D4ED8;font-weight:700;text-decoration:none;font-size:1.1em}
+main{overflow-wrap:anywhere}pre,table{max-width:100%;overflow-x:auto}header{white-space:normal}
+footer{color:#64748B;font-size:.85em;text-align:center;padding:30px 18px}</style></head><body><header><a href="/"><span class="chip">N E X I A</span></a> &nbsp; l'IA pratique pour les petites entreprises</header>
+<main><h1>Faire ses devis avec l&#x27;IA : Vos devis rédigés par l&#x27;IA à partir de vos notes</h1><p><em>Extrait offert du guide NEXIA : présentation et niveau 1 en entier.</em></p><div class="cta"><b>Vous avez le niveau 1. La suite est dans le guide complet.</b><br>Niveaux 2 et 3 pas à pas, consignes IA prêtes à copier, glossaire, récapitulatif sur une page. PDF, 20 €.<br><a href="https://nexiapro.gumroad.com/l/devis-avec-ia?utm_source=site&utm_medium=article">Obtenir le guide complet</a></div><h2>Avant de commencer</h2>
+<p><strong>À qui s'adresse ce guide.</strong> Aux artisans, indépendants, consultants et dirigeants de petites entreprises qui rédigent eux-mêmes leurs devis et leurs propositions commerciales. Vous connaissez ce moment : la visite chez le client est terminée, les notes sont dans un carnet ou dans le téléphone, et le devis attend le soir ou le week-end. Parfois il part trop tard, et le client a signé ailleurs. Aucune compétence technique n'est requise, aucune ligne de code.</p>
+<p><strong>Ce que vous aurez à la fin.</strong> Trois niveaux indépendants :</p>
+<ol>
+<li><strong>Niveau 1 (20 minutes de mise en place)</strong> : vos notes brutes, tapées ou dictées, transformées par l'IA en un devis structuré et en un court message d'accompagnement, prêts à relire.</li>
+<li><strong>Niveau 2 (30 minutes)</strong> : un « projet » Claude qui connaît vos tarifs, vos conditions et votre façon d'écrire. Vous n'avez plus à tout réexpliquer : vous collez vos notes, le brouillon utilise vos vrais prix.</li>
+<li><strong>Niveau 3 (40 minutes)</strong> : un modèle de devis à votre en-tête dans Google Docs, un export PDF propre, et un tableau de suivi pour savoir quel devis relancer, et quand.</li>
+</ol>
+<p><strong>Combien de temps vous pouvez en attendre.</strong> À titre d'estimation, sur un scénario type : un devis de cinq à dix lignes rédigé en une dizaine de minutes, relecture comprise, au lieu d'une demi-heure ou plus devant une page blanche. Ce chiffre n'est pas une mesure : c'est un ordre de grandeur. Votre gain réel dépend de la complexité de vos devis et du soin apporté à votre grille tarifaire au niveau 2.</p>
+<p><strong>Ce dont vous avez besoin.</strong></p>
+<ul>
+<li>Un ordinateur avec un navigateur récent (Chrome, Edge ou Safari) et une adresse email.</li>
+<li>Un compte Google (gratuit) pour Google Docs et Google Sheets.</li>
+<li>Votre liste de prix habituelle, même approximative, et un ancien devis dont vous êtes satisfait.</li>
+<li>Budget : 0 € pour les trois niveaux. L'offre payante de Claude (Pro, 20 $ par mois hors taxes en paiement mensuel, prix constaté en septembre 2026) n'est utile que si vous atteignez les limites d'usage de l'offre gratuite.</li>
+</ul>
+<p><strong>Ce que ce guide n'est pas.</strong> Un logiciel de facturation, ni un conseil juridique. Il vous aide à rédiger plus vite des devis clairs. La conformité de votre modèle (mentions obligatoires de votre métier, TVA, assurances) reste de votre responsabilité : faites-le valider une fois par votre expert-comptable ou votre organisation professionnelle si vous avez un doute.</p>
+<p><strong>Comment lire ce guide.</strong> Manipulations numérotées, points de contrôle « Vous devez voir », encadrés « Si ça ne marche pas », glossaire en fin de guide. Chaque niveau fonctionne seul. Commencez par le niveau 1 : il suffit déjà à gagner du temps dès ce soir.</p>
+<h2>Chapitre 1. Comprendre en 3 minutes</h2>
+<h2>1.1 Pourquoi les devis traînent</h2>
+<p>Un devis demande trois efforts différents. Retrouver les bons prix. Mettre les prestations en ordre, avec les bonnes unités et les bonnes quantités. Puis écrire un texte clair pour le client. Le premier effort dépend de votre expertise : personne ne peut le faire à votre place. Les deux autres sont de la mise en forme. C'est précisément ce que l'IA fait bien.</p>
+<h2>1.2 Ce que l'IA fait, et ce qu'elle ne fait pas</h2>
+<p>Une <strong>IA conversationnelle</strong> est un programme qui comprend un texte écrit en langage courant et y répond par écrit. Vous lui donnez vos notes, elle vous rend un brouillon organisé.</p>
+<p><strong>Ce qu'elle fait bien</strong> : remettre des notes désordonnées dans un ordre logique, découper une prestation en lignes, reformuler en français clair, calculer des totaux à partir des prix que vous lui donnez, rédiger le message d'envoi.</p>
+<p><strong>Ce qu'elle ne fait pas</strong> : fixer vos prix, connaître vos coûts, garantir que votre devis respecte les règles de votre métier. Elle peut aussi se tromper dans un calcul ou inventer un prix si vous ne lui en donnez pas. C'est pourquoi chaque consigne de ce guide lui interdit d'inventer un montant, et pourquoi chaque niveau se termine par une relecture.</p>
+<h2>1.3 Les outils du guide</h2>
+<p><strong>Claude</strong> : l'IA conversationnelle de la société Anthropic, utilisable sur le site claude.ai. L'offre gratuite suffit pour ce guide. Elle permet aussi de créer jusqu'à 5 « projets » (voir niveau 2). L'interface existe en français.</p>
+<p><strong>Google Docs</strong> : le traitement de texte gratuit de Google, dans le navigateur. Il servira de modèle de devis et produira le PDF envoyé au client.</p>
+<p><strong>Google Sheets</strong> : le tableur gratuit de Google. Il accueillera votre grille tarifaire et votre tableau de suivi des devis.</p>
+<p>Vous utilisez déjà une autre IA conversationnelle ? Les consignes des niveaux 1 et 3 s'y utilisent de la même façon. Seul le niveau 2 décrit des menus propres à Claude.</p>
+<h2>1.4 L'avertissement honnête du guide</h2>
+<p><strong>Les règles du devis existent, et elles varient selon les métiers.</strong> Pour certaines activités (travaux et dépannage dans le bâtiment ou l'équipement de la maison, déménagement, services à la personne au-delà d'un certain montant, entre autres), le devis est obligatoire et ses mentions sont listées par la réglementation. Le site officiel Service Public Entreprendre en donne la liste sur sa fiche « Devis obligatoire : activités concernées ». Autre exemple : si vous êtes entrepreneur individuel, votre nom doit être précédé ou suivi de la mention « entrepreneur individuel » ou « EI » sur vos documents commerciaux, devis compris. Ce guide ne remplace pas ces textes : il vous aide à construire un modèle qui les reprend, une fois pour toutes.</p>
+<p><strong>Vos devis contiennent des données personnelles.</strong> Nom, adresse, téléphone du client : ce sont des données protégées par le <strong>RGPD</strong> (le règlement européen sur la protection des données personnelles). Quand vous collez ces informations dans une IA, elles passent par les serveurs de son éditeur. La façon la plus simple de limiter ce passage : ne donnez à l'IA que le contenu technique du devis (les prestations, les quantités), et ajoutez le nom et l'adresse du client vous-même dans le modèle Google Docs, au niveau 3. Ce guide ne donne pas de conseil juridique : en cas de doute sur vos obligations, renseignez-vous auprès de la CNIL ou de votre conseil habituel.</p>
+<p><strong>Vous restez le signataire.</strong> Un devis signé par le client l'engage, et vous engage aussi. Aucun devis ne doit partir sans que vous ayez relu chaque ligne et chaque total.</p>
+<h2>Chapitre 2. Niveau 1 : votre premier devis à partir de vos notes (20 minutes)</h2>
+<h2>2.1 Créer votre compte Claude et le régler</h2>
+<ol>
+<li>Allez sur <strong>claude.ai</strong> et créez un compte gratuit avec votre adresse email ou votre compte Google.</li>
+<li>Passez l'interface en français si elle s'affiche en anglais : cliquez sur l'icône de votre profil, en bas à gauche, puis choisissez la langue dans la section <strong>Language</strong>.</li>
+<li>Réglez la confidentialité : cliquez sur votre nom pour ouvrir le menu, puis ouvrez les paramètres (<strong>Settings</strong>) et la rubrique <strong>Privacy</strong>. Si votre interface est en français, ces libellés apparaissent traduits. Un réglage y autorise l'utilisation de vos conversations pour améliorer les modèles d'Anthropic. Désactivez-le si vous ne souhaitez pas que vos échanges servent à cela. Lien direct : claude.ai/settings/data-privacy-controls.</li>
+</ol>
+<blockquote>
+<p><strong>Vous devez voir</strong> : la page d'accueil de Claude avec une zone de saisie au centre, et dans les paramètres de confidentialité, le réglage d'amélioration des modèles dans la position que vous avez choisie.</p>
+</blockquote>
+<h2>2.2 Préparer vos notes</h2>
+<p>Des notes courtes suffisent, à condition de contenir quatre choses :</p>
+<ol>
+<li><strong>Le contexte</strong> : type de client et objet du devis, en une phrase.</li>
+<li><strong>Les prestations</strong> : ce que vous allez faire ou fournir, une idée par ligne.</li>
+<li><strong>Les quantités et les prix</strong> : les vôtres. Sinon, écrivez « prix à compléter ».</li>
+<li><strong>Les conditions</strong> : délai, acompte, durée de validité.</li>
+</ol>
+<p>Pour dicter sans rien installer, deux possibilités : la touche micro du clavier de votre téléphone, ou la <strong>saisie vocale</strong> de Google Docs sur ordinateur (menu <strong>Outils</strong> puis <strong>Saisie vocale</strong>, dans Chrome, Edge ou Safari). La dictée fonctionne en français, mais les commandes vocales de Google Docs n'existent qu'en anglais : relisez la ponctuation.</p>
+<p><em>Scénario type (fictif), pour illustrer.</em> Un peintre en bâtiment note après une visite : « Particulier, salon 25 m² plus couloir. Lessivage murs, rebouchage fissures, 2 couches mat blanc murs, plafond 1 couche. Fourniture peinture 180 € environ. Main-d'œuvre 3 jours à 2, taux 45 € HT de l'heure. Protection sols. Démarrage sous 3 semaines. Acompte 30 %. »</p>
+<h2>2.3 La consigne qui transforme vos notes en devis</h2>
+<p>Une <strong>consigne</strong> (on dit aussi « prompt ») est le texte d'instruction que vous donnez à l'IA. Copiez celle-ci dans Claude, remplacez la partie entre crochets par vos notes, puis envoyez :</p>
+<blockquote>
+<p>Tu es l'assistant administratif d'une petite entreprise française. À partir des notes ci-dessous, rédige un projet de devis. Présente un tableau avec les colonnes : désignation, unité, quantité, prix unitaire HT, total HT. Regroupe les lignes par étape du chantier ou de la mission. Calcule le total HT, la TVA au taux que j'indique, et le total TTC. Règle absolue : n'invente aucun prix ni aucune quantité. S'il manque une information, écris « À COMPLÉTER » dans la case et liste à la fin les questions que je dois trancher. Rédige ensuite un message d'envoi de 5 lignes maximum, poli et direct, au vouvoiement. Taux de TVA : [indiquez votre taux, ou « non applicable » selon votre situation]. Mes notes : [collez vos notes].</p>
+</blockquote>
+<p><strong>HT</strong> signifie « hors taxes », <strong>TTC</strong> « toutes taxes comprises ». Indiquez toujours vous-même le taux de TVA : il dépend de votre situation, pas de l'IA.</p>
+<blockquote>
+<p><strong>Vous devez voir</strong> : un tableau de lignes claires reprenant vos prix sans en ajouter, des totaux, une liste de points « À COMPLÉTER » s'il en manque, et un message d'envoi court.</p>
+<p><strong>Si ça ne marche pas</strong> : si l'IA a inventé un prix, répondez simplement « Tu as inventé le prix de la ligne X. Remplace-le par À COMPLÉTER. » Si le tableau s'affiche mal une fois collé, demandez « Présente le devis en liste, sans tableau ».</p>
+</blockquote>
+<h2>2.4 Relire en 3 minutes</h2>
+<p>La relecture vous revient, dans cet ordre :</p>
+<ol>
+<li><strong>Les prix</strong> : chaque prix unitaire correspond-il à votre tarif ? Aucun n'a-t-il été ajouté ?</li>
+<li><strong>Les calculs</strong> : refaites au moins le total HT. Une IA peut se tromper dans une addition.</li>
+<li><strong>Les oublis</strong> : déplacement, fournitures, évacuation des déchets, options. Relisez vos notes d'origine en face du brouillon.</li>
+<li><strong>Le ton</strong> : s'il ne vous ressemble pas, demandez « Plus sobre » ou « Plus chaleureux ».</li>
+</ol>
+<blockquote>
+<p><strong>Vous devez voir</strong> : un brouillon dont vous avez vérifié chaque prix et chaque total.</p>
+</blockquote><div class="cta"><b>Vous avez le niveau 1. La suite est dans le guide complet.</b><br>Niveaux 2 et 3 pas à pas, consignes IA prêtes à copier, glossaire, récapitulatif sur une page. PDF, 20 €.<br><a href="https://nexiapro.gumroad.com/l/devis-avec-ia?utm_source=site&utm_medium=article">Obtenir le guide complet</a></div></main><footer>NEXIA, guides pratiques pour TPE, PME et indépendants. Les gains de temps indiqués sont des estimations sur des scénarios types.</footer></body></html>
