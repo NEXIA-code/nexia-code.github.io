@@ -1,6 +1,6 @@
 <!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Prise de rendez-vous en ligne automatisée : guide pas à pas | NEXIA</title><meta name="description" content="À qui s&#x27;adresse ce guide. Aux indépendants, artisans, consultants et petites équipes commerciales qui passent encore par des allers-retours d&#x27;emails ou de…">
-<link rel="canonical" href="https://nexia-code.github.io/guides/prise-de-rendez-vous-automatisee/"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%233B82F6%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-size=%2720%27 font-family=%27Arial%27 font-weight=%27700%27 fill=%27white%27 text-anchor=%27middle%27%3EN%3C/text%3E%3C/svg%3E"><meta property="og:type" content="website"><meta property="og:url" content="https://nexia-code.github.io/guides/prise-de-rendez-vous-automatisee/"><meta property="og:site_name" content="NEXIA"><meta property="og:title" content="Prise de rendez-vous en ligne automatisée : guide pas à pas | NEXIA"><meta property="og:description" content="À qui s&#x27;adresse ce guide. Aux indépendants, artisans, consultants et petites équipes commerciales qui passent encore par des allers-retours d&#x27;emails ou de…">
+<title>Prise de rendez-vous en ligne automatisée : guide pas à pas | NEXIA</title><meta name="description" content="À qui s&#x27;adresse ce guide. Aux indépendants, artisans, consultants, thérapeutes et petites équipes qui fixent encore leurs rendez-vous par des…">
+<link rel="canonical" href="https://nexia-code.github.io/guides/prise-de-rendez-vous-automatisee/"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%233B82F6%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-size=%2720%27 font-family=%27Arial%27 font-weight=%27700%27 fill=%27white%27 text-anchor=%27middle%27%3EN%3C/text%3E%3C/svg%3E"><meta property="og:type" content="website"><meta property="og:url" content="https://nexia-code.github.io/guides/prise-de-rendez-vous-automatisee/"><meta property="og:site_name" content="NEXIA"><meta property="og:title" content="Prise de rendez-vous en ligne automatisée : guide pas à pas | NEXIA"><meta property="og:description" content="À qui s&#x27;adresse ce guide. Aux indépendants, artisans, consultants, thérapeutes et petites équipes qui fixent encore leurs rendez-vous par des…">
 <style>*{box-sizing:border-box}body{margin:0;font:17px/1.7 -apple-system,'Helvetica Neue',Arial,sans-serif;color:#1E293B;background:#F8FAFC}
 header{background:#0F172A;color:#fff;padding:18px 20px}header a{color:#fff;text-decoration:none;font-weight:700;letter-spacing:.3em}
 .chip{background:#3B82F6;border-radius:6px;padding:5px 12px}main{max-width:760px;margin:0 auto;padding:28px 18px 60px}
@@ -13,58 +13,173 @@ pre code{background:none;color:inherit}.cta{background:#0F172A;color:#fff;border
 main{overflow-wrap:break-word}pre{max-width:100%;overflow-x:auto}table{display:block;max-width:100%;overflow-x:auto;border-collapse:collapse}td,th{white-space:nowrap;padding:6px 10px;border-bottom:1px solid #E2E8F0}.cta a.sec{background:transparent;border:2px solid #fff}main a{color:#1D4ED8}.cta a{color:#fff}header{white-space:normal}
 footer{color:#64748B;font-size:.85em;text-align:center;padding:30px 18px}</style></head><body><header><a href="/"><span class="chip">N E X I A</span></a> &nbsp; l'IA pratique pour les petites entreprises</header>
 <main><h1>Automatisez votre prise de rendez-vous</h1><p><em>Extrait offert du guide NEXIA : présentation, premiers chapitres et niveau 1 en entier.</em></p><div class="cta"><b>Le niveau 1 de ce guide est offert ci-dessous.</b><br>Le guide complet (PDF) ajoute les niveaux suivants pas à pas, des consignes IA prêtes à copier, un glossaire et un récapitulatif.<br><a href="https://nexiapro.gumroad.com/l/prise-de-rendez-vous-automatisee?utm_source=site&utm_medium=guide">Guide complet : 20 €*</a> &nbsp; <a class="sec" href="https://nexiapro.gumroad.com/l/pack-guides-nexia?utm_source=site&utm_medium=guide">Pack des 7 guides : 59 €* au lieu de 140 €</a><br><small>* TVA éventuelle selon votre pays ajoutée par Gumroad au paiement.</small></div><h2>Avant de commencer</h2>
-<p><strong>À qui s'adresse ce guide.</strong> Aux indépendants, artisans, consultants et petites équipes commerciales qui passent encore par des allers-retours d'emails ou de téléphone pour fixer un rendez-vous : « Vous seriez disponible quand ? », « Plutôt mardi ou jeudi ? », suivis d'un oubli une fois sur cinq faute de rappel. Aucune compétence technique requise, aucune ligne de code.</p>
-<p><strong>Ce que vous aurez à la fin.</strong> Trois niveaux indépendants :</p>
+<p><strong>À qui s'adresse ce guide.</strong> Aux indépendants, artisans, consultants, thérapeutes et petites équipes qui fixent encore leurs rendez-vous par des allers-retours d'emails ou de téléphone : « Vous seriez disponible quand ? », « Plutôt mardi ou jeudi ? », puis un rendez-vous oublié faute de rappel. Aucune compétence technique n'est requise, aucune ligne de code.</p>
+<p><strong>Ce que vous aurez à la fin.</strong> Trois niveaux, à suivre dans l'ordre :</p>
 <ol>
-<li><strong>Niveau 1 (20 minutes de mise en place)</strong> : un lien de prise de rendez-vous en ligne, qui affiche vos disponibilités réelles et bloque automatiquement votre agenda, à envoyer en une ligne au lieu de dix échanges.</li>
-<li><strong>Niveau 2 (30 minutes)</strong> : un questionnaire de qualification rempli avant le rendez-vous, résumé par l'IA, plus une confirmation et un rappel automatique qui réduisent les rendez-vous manqués.</li>
-<li><strong>Niveau 3 (30 minutes)</strong> : le suivi après le rendez-vous : relance automatique en cas d'absence, et une note de synthèse pré-remplie par l'IA à partir du questionnaire, prête pour votre CRM ou votre tableau de suivi.</li>
+<li><strong>Niveau 1 (20 minutes, gratuit)</strong> : un lien de réservation en ligne avec Cal.com. Il affiche vos vrais créneaux libres, ajoute chaque rendez-vous dans votre agenda et envoie la confirmation tout seul.</li>
+<li><strong>Niveau 2 (40 minutes, gratuit)</strong> : deux ou trois questions posées au moment de la réservation, un rappel automatique avant le rendez-vous, et une fiche de préparation reçue dans votre boîte Gmail à chaque nouvelle réservation, grâce à Make.</li>
+<li><strong>Niveau 3 (40 minutes, gratuit)</strong> : un tableau Google Sheets de suivi qui se remplit seul, et, quand vous marquez une personne absente, un brouillon de message de reprogrammation prêt dans Gmail. Vous relisez et vous envoyez.</li>
 </ol>
-<p><strong>Combien de temps vous pouvez en attendre.</strong> À titre d'estimation, sur un scénario type : les allers-retours de prise de rendez-vous (souvent 3 à 5 échanges, 10 à 15 minutes cumulées) ramenés à l'envoi d'un seul lien. Le rappel automatique du niveau 2 du guide complet vise aussi à réduire les rendez-vous oubliés, sans qu'on puisse chiffrer par avance l'ampleur de cette réduction pour votre activité. Ce sont des estimations : votre gain dépend de votre volume de rendez-vous.</p>
+<p><strong>Combien de temps vous pouvez en attendre.</strong> Sur le scénario type décrit plus bas, nous estimons qu'un rendez-vous fixé par email demande 3 à 5 échanges, soit 10 à 15 minutes cumulées entre la lecture, la consultation de l'agenda et les réponses. Avec le lien, il reste une phrase à écrire. Le rappel automatique vise à réduire les oublis, sans qu'on puisse chiffrer d'avance l'effet sur votre activité. Ce n'est pas une mesure : votre gain dépend de votre nombre de rendez-vous.</p>
+<p><em>Estimation sur un scénario type (une trentaine de rendez-vous par mois), pas une mesure :</em></p>
+<table>
+<thead>
+<tr>
+<th>Tâche</th>
+<th>Avant</th>
+<th>Avec le guide</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fixer un rendez-vous</td>
+<td>3 à 5 emails, 10 à 15 minutes</td>
+<td>un lien envoyé en une phrase</td>
+</tr>
+<tr>
+<td>Reporter le rendez-vous dans l'agenda</td>
+<td>à la main, avec un risque d'erreur</td>
+<td>automatique</td>
+</tr>
+<tr>
+<td>Rappeler le rendez-vous la veille</td>
+<td>de mémoire, ou jamais</td>
+<td>email de rappel automatique</td>
+</tr>
+<tr>
+<td>Préparer le rendez-vous</td>
+<td>rechercher les échanges précédents</td>
+<td>fiche de préparation reçue à la réservation</td>
+</tr>
+<tr>
+<td>Relancer une personne absente</td>
+<td>écrire le message, chercher son adresse</td>
+<td>brouillon prêt dans Gmail, relu en une minute</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Le scénario type suivi dans ce guide.</strong> Sophie (personnage fictif) est conseillère en aménagement intérieur, à son compte. Elle propose un « Appel découverte » de 20 minutes en visio à ses prospects, une trentaine par mois. Jusqu'ici, elle fixait chaque appel par email et oubliait parfois de noter le créneau. À chaque niveau, vous verrez ce que Sophie construit, jusqu'à deux réservations suivies du début à la fin : celle de Paul Martin, qui vient, et celle de Claire Robin, qui ne vient pas.</p>
 <p><strong>Ce dont vous avez besoin.</strong></p>
 <ul>
-<li>Un ordinateur, une adresse email, un agenda en ligne (Google Agenda ou Outlook, les deux gratuits et déjà présents chez la plupart des professionnels)</li>
-<li>Budget : 0 € pour démarrer, quelques euros par mois si votre volume grandit (détaillé au fil du guide)</li>
+<li>Un ordinateur, Mac ou PC, avec un navigateur récent (Chrome, Edge, Firefox ou Safari).</li>
+<li>Un agenda en ligne : Google Agenda, Outlook ou Apple Calendar.</li>
+<li>Pour les niveaux 2 du guide complet et 3 : un compte Google (gratuit) pour Gmail et Google Sheets.</li>
+<li>Une seconde adresse email (personnelle, par exemple) pour faire les réservations de test.</li>
 </ul>
-<p><strong>Ce que ce guide n'est pas.</strong> Un logiciel de gestion de planning d'équipe complexe (plusieurs praticiens, ressources partagées, facturation intégrée) : ce guide couvre la prise de rendez-vous individuelle ou en petite équipe, le cas le plus courant pour un indépendant ou une PME.</p>
-<p><strong>Comment lire ce guide.</strong> Manipulations numérotées, points de contrôle « Vous devez voir », encadrés « Si ça ne marche pas », glossaire final. Chaque niveau est autonome : commencez par celui qui répond à votre besoin le plus pressant.</p>
-<hr />
-<h2>Chapitre 1. Comprendre en 3 minutes</h2>
-<h3>1.1 Le vrai coût d'une prise de rendez-vous par email</h3>
-<p>Fixer un rendez-vous par email semble gratuit, mais coûte en réalité trois choses : du temps (les allers-retours), de la friction pour l'autre personne (qui doit ouvrir son agenda, comparer, répondre), et des rendez-vous manqués (sans rappel, l'oubli est humain et fréquent). Un lien de prise de rendez-vous en ligne, couplé à une confirmation et un rappel automatiques, résout les trois à la fois.</p>
+<p><strong>Ce que cela coûte.</strong> Les trois niveaux tiennent dans les offres gratuites, vérifiées le 2 octobre 2026 :</p>
+<ul>
+<li><strong>Cal.com</strong>, offre Free : un utilisateur, types de rendez-vous et agendas illimités, questions de réservation, webhooks. Le rappel avant le rendez-vous est possible avec le message par défaut, sans personnalisation.</li>
+<li><strong>Make</strong>, offre gratuite : 1 000 crédits par mois, deux scénarios actifs au plus. Le guide n'en utilise qu'un. Sur le scénario type, nous estimons la consommation à une centaine de crédits par mois (calcul en section 4.7).</li>
+<li><strong>Google Sheets et Gmail</strong> : gratuits avec un compte Google.</li>
+<li><strong>Claude</strong> : offre gratuite sur claude.ai, pour écrire vos questions et vos messages.</li>
+</ul>
+<p>Ces offres peuvent changer. Le guide signale les limites que vous risquez de rencontrer.</p>
+<p><strong>Ce que ce guide n'est pas.</strong> Un logiciel de planning d'équipe (plusieurs praticiens, salles partagées, répartition automatique des rendez-vous) : Cal.com le fait, mais avec ses offres payantes, hors du cadre de ce guide. Ce n'est pas non plus un conseil en conformité RGPD.</p>
+<p><strong>Comment lire ce guide.</strong> Chaque manipulation est numérotée, avec le nom exact du bouton ou du menu en gras. Cal.com et Make affichent souvent leurs menus en anglais : le guide les cite tels quels et explique leur rôle en français. Après chaque étape importante, un encadré « Vous devez voir » vous confirme que vous êtes au bon endroit, et un encadré « Si ça ne marche pas » vous dépanne. Les textes à copier sont présentés dans des cadres : remplacez ce qui est entre crochets et en majuscules. Les mots techniques sont expliqués à leur première apparition et repris dans le glossaire. Vous pouvez vous arrêter à la fin de n'importe quel niveau : chacun fonctionne seul.</p>
+<h2>Chapitre 1. Comprendre en 5 minutes</h2>
+<h3>1.1 Ce que coûte un rendez-vous fixé par email</h3>
+<p>Fixer un rendez-vous par email semble gratuit. En réalité, il coûte trois choses :</p>
+<ul>
+<li><strong>Du temps.</strong> Chaque échange oblige à rouvrir l'agenda, à comparer, à répondre. Trois à cinq messages pour un seul créneau, c'est courant.</li>
+<li><strong>De l'effort pour l'autre personne.</strong> Elle doit elle aussi consulter son agenda et vous répondre. Certains prospects abandonnent à ce stade.</li>
+<li><strong>Des rendez-vous manqués.</strong> Sans rappel, l'oubli est humain, des deux côtés.</li>
+</ul>
+<p>Un lien de réservation règle les deux premiers points : la personne voit vos créneaux libres et choisit. Un rappel automatique et un suivi des absences traitent le troisième.</p>
 <h3>1.2 Les outils du guide</h3>
-<p><strong>Cal.com</strong> : un outil de prise de rendez-vous en ligne, gratuit dans sa version de base, qui se synchronise avec votre agenda et génère un lien de réservation. Alternative équivalente : Calendly, plus connu mais plus limité en gratuit (un seul type de rendez-vous).</p>
-<p><strong>Make</strong> : le chef d'orchestre qui relie votre outil de prise de rendez-vous à l'IA et à vos rappels. Plan gratuit suffisant pour ce guide.</p>
-<p><strong>Claude</strong> : l'IA qui résume les réponses de qualification et rédige les messages de confirmation ou de relance, utilisée via son API (une « prise » pour logiciels, quelques euros de crédit pour plusieurs mois d'usage).</p>
-<h3>1.3 L'avertissement honnête du guide</h3>
-<p>Un lien de prise de rendez-vous n'est adopté par vos clients ou prospects que s'il est simple à utiliser et clairement présenté : accompagnez toujours son envoi d'une phrase d'explication (« Choisissez le créneau qui vous arrange, la confirmation est immédiate »), plutôt que de l'envoyer seul et sans contexte.</p>
-<hr />
-<h2>Chapitre 2. Niveau 1 : votre lien de prise de rendez-vous en 20 minutes</h2>
-<h3>2.1 Créer votre compte et connecter votre agenda</h3>
+<p><strong>Cal.com</strong> : un service de prise de rendez-vous en ligne. Vous connectez votre agenda, vous indiquez vos horaires, et Cal.com vous donne un lien. La personne qui clique voit uniquement les créneaux où vous êtes libre, réserve, et le rendez-vous s'ajoute dans votre agenda. Son offre Free couvre tout ce guide. Calendly fait la même chose, mais son offre gratuite se limite à un seul type de rendez-vous et un seul agenda connecté (vérifié le 2 octobre 2026) : c'est pourquoi ce guide utilise Cal.com.</p>
+<p><strong>Make</strong> : un service qui relie des applications entre elles, sans code. Un « scénario » Make est une suite d'actions qui se déclenche toute seule. Ici, à chaque réservation, Make vous envoie une fiche de préparation et remplit votre tableau de suivi.</p>
+<p><strong>Google Sheets et Gmail</strong> : le tableur et la messagerie de Google, gratuits avec un compte Google.</p>
+<p><strong>Claude</strong> : l'assistant d'intelligence artificielle d'Anthropic, utilisé sur claude.ai pour écrire vos questions de réservation, la présentation de votre rendez-vous et vos messages types. Il n'intervient pas dans l'automatisation : aucune donnée de vos clients ne lui est envoyée par le système de ce guide.</p>
+<h3>1.3 Les coordonnées de vos clients sont des données personnelles</h3>
+<p>Le nom, l'adresse email et les réponses d'une personne qui réserve sont des données personnelles au sens du RGPD (le règlement européen sur la protection des données). Trois réflexes de base :</p>
+<ul>
+<li><strong>Savoir où vont les données.</strong> Cal.com est une société américaine : sa politique de confidentialité indique que les données sont traitées aux États-Unis, dans le cadre du Data Privacy Framework (l'accord UE et États-Unis sur les transferts de données), et qu'un hébergement dans l'Union européenne peut être demandé à privacy@cal.com. Make indique que les données de résidents européens peuvent être transférées hors de l'Espace économique européen. Google stocke votre tableau et vos emails.</li>
+<li><strong>Ne demander que l'utile.</strong> Chaque question de réservation doit servir à préparer le rendez-vous. Pas de date de naissance, pas de numéro de téléphone si vous ne rappelez jamais.</li>
+<li><strong>Informer les personnes.</strong> Indiquez dans la description de votre rendez-vous, en une phrase, à quoi servent les réponses et renvoyez vers vos mentions d'information (sur votre site, par exemple). La CNIL détaille ce qu'il faut dire aux personnes (finalité, destinataires, transferts hors de l'Union européenne).</li>
+</ul>
+<p>Si votre activité touche à la santé (thérapeutes, praticiens), les réponses à vos questions peuvent devenir des données de santé, soumises à des règles plus strictes : ne posez alors aucune question sur l'état de santé dans le formulaire de réservation, et renseignez-vous auprès de votre ordre ou d'un professionnel du droit.</p>
+<p>Ces repères ne rendent pas votre activité conforme au RGPD : ils évitent les erreurs les plus courantes.</p>
+<h3>1.4 L'avertissement honnête du guide</h3>
+<p>Un lien de réservation envoyé seul, sans un mot, ressemble à « débrouillez-vous ». Accompagnez-le toujours d'une phrase (« Choisissez le créneau qui vous arrange, la confirmation arrive aussitôt par email »). Gardez aussi une porte ouverte pour ceux qui préfèrent le téléphone : le lien est une facilité, pas une obligation pour vos clients.</p>
+<h2>Chapitre 2. Niveau 1 : votre lien de réservation (20 minutes, gratuit)</h2>
+<p>À la fin de ce chapitre, vous aurez un lien qui affiche vos créneaux libres. Chaque réservation s'ajoute à votre agenda et déclenche un email de confirmation, pour vous et pour la personne.</p>
+<h3>2.1 Créer votre compte Cal.com</h3>
 <ol>
-<li>Allez sur <strong>cal.com</strong> et créez un compte gratuit</li>
-<li>Connectez votre agenda (Google Agenda ou Outlook) : Cal.com lira vos créneaux déjà occupés pour ne jamais proposer un horaire pris</li>
-<li>Définissez vos disponibilités générales (par exemple : du lundi au vendredi, 9 h à 18 h) dans les paramètres de disponibilité</li>
+<li>Allez sur <strong>cal.com/signup</strong>.</li>
+<li>Choisissez votre nom d'utilisateur : il apparaîtra dans votre lien (cal.com/votre-nom). Évitez un nom très court ou très courant : Cal.com les facture comme noms « premium ».</li>
+<li>Saisissez votre adresse email et un mot de passe, ou cliquez sur l'inscription avec votre compte Google.</li>
+<li>Dans l'étape d'accueil, saisissez votre nom tel que vos clients doivent le voir et vérifiez le fuseau horaire (<strong>Europe/Paris</strong> en France métropolitaine).</li>
 </ol>
 <blockquote>
-<p><strong>Vous devez voir</strong> : votre agenda connecté avec un statut « synchronisé », et vos disponibilités générales enregistrées.</p>
+<p><strong>Vous devez voir</strong> l'étape suivante de l'accueil, qui propose de connecter un agenda.</p>
 </blockquote>
-<h3>2.2 Créer votre type de rendez-vous</h3>
+<h3>2.2 Connecter votre agenda</h3>
+<p>C'est l'étape qui empêche les doubles réservations : Cal.com lit les créneaux déjà pris dans votre agenda et ne les propose jamais.</p>
 <ol>
-<li>Créez un « type d'événement » : donnez-lui un nom clair pour la personne qui réserve (« Appel découverte 20 minutes », « Rendez-vous conseil 45 minutes »)</li>
-<li>Définissez sa durée, et un délai minimum avant réservation (par exemple, pas de réservation dans les 4 heures qui suivent, pour vous laisser le temps de vous organiser)</li>
-<li>Ajoutez une description courte visible par la personne qui réserve : ce à quoi s'attendre pendant ce rendez-vous</li>
+<li>Dans l'étape d'accueil, choisissez votre agenda (Google Agenda, Outlook ou Apple Calendar). Si vous avez passé cette étape, allez dans <strong>Settings</strong>, onglet <strong>Calendars</strong>, puis <strong>Add Calendar</strong>.</li>
+<li>Autorisez l'accès quand la fenêtre de votre fournisseur s'ouvre. Pour Apple Calendar, Cal.com demande un « mot de passe pour application », à créer sur appleid.apple.com.</li>
+<li>Dans la liste des agendas installés, cochez tous ceux qui doivent bloquer des créneaux (agenda professionnel, et agenda personnel si vos rendez-vous privés tombent en journée).</li>
 </ol>
 <blockquote>
-<p><strong>Vous devez voir</strong> : une page de réservation publique, avec un calendrier de créneaux disponibles calculé automatiquement à partir de vos disponibilités et de votre agenda.</p>
-<p><strong>Si ça ne marche pas</strong> : si des créneaux apparaissent disponibles alors que vous êtes occupé, vérifiez que la synchronisation de l'agenda porte bien sur le bon compte et le bon calendrier (certains professionnels ont plusieurs agendas Google, un seul est parfois connecté par erreur).</p>
+<p><strong>Vous devez voir</strong> votre agenda dans la liste des agendas installés, avec les calendriers cochés pour la vérification des conflits.</p>
+<p><strong>Si ça ne marche pas</strong> : si un créneau apparaît libre alors que vous êtes occupé, c'est presque toujours un calendrier non coché. Beaucoup de professionnels ont plusieurs agendas dans un même compte Google : cochez chacun d'eux.</p>
 </blockquote>
-<h3>2.3 Partager votre lien</h3>
+<h3>2.3 Régler vos horaires</h3>
 <ol>
-<li>Copiez le lien de votre type d'événement</li>
-<li>Ajoutez-le à votre signature email, à votre profil LinkedIn, ou envoyez-le directement en réponse à toute demande de rendez-vous</li>
-<li>Sur votre site si vous en avez un, intégrez le bouton de réservation fourni par Cal.com dans son code d'intégration</li>
+<li>Dans l'étape d'accueil, ou plus tard dans le menu <strong>Availability</strong>, indiquez vos jours et heures de rendez-vous (par exemple du lundi au vendredi, de 9 h à 12 h et de 14 h à 18 h).</li>
+<li>Vérifiez que le fuseau horaire de ces horaires est bien le vôtre.</li>
+<li>Pour un jour particulier (congé, salon), utilisez les exceptions de date (<strong>Date overrides</strong>) plutôt que de modifier vos horaires généraux.</li>
 </ol>
 <blockquote>
-<p><strong>Vous devez voir</strong> : en cliquant sur le lien depuis un autre appareil, une page de réservation propre, sans jargon technique, qui aboutit à un email de confirmation automatique des deux côtés.</p>
-</blockquote><p><em>Ce contenu est rédigé par des outils d&#x27;intelligence artificielle (Claude, d&#x27;Anthropic). Les règles et chiffres cités sont vérifiés automatiquement sur les sources officielles indiquées, sans relecture humaine systématique. Publication sous la responsabilité de Romain Dalon Bourbon EI. Information générale, pas un conseil juridique.</em></p><div class="cta"><b>Vous avez le niveau 1. La suite est dans le guide complet.</b><br>Niveaux suivants pas à pas, consignes IA prêtes à copier, glossaire, récapitulatif sur une page. PDF, 20 €*.<br><a href="https://nexiapro.gumroad.com/l/prise-de-rendez-vous-automatisee?utm_source=site&utm_medium=guide">Guide complet : 20 €*</a> &nbsp; <a class="sec" href="https://nexiapro.gumroad.com/l/pack-guides-nexia?utm_source=site&utm_medium=guide">Pack des 7 guides : 59 €* au lieu de 140 €</a><br><small>* TVA éventuelle selon votre pays ajoutée par Gumroad au paiement.</small></div></main><footer>NEXIA, Romain Dalon Bourbon EI. Guides pratiques pour TPE, PME et indépendants, rédigés avec l'IA. Les gains de temps indiqués sont des estimations sur des scénarios types.<br><a href="/mentions-legales/">Mentions légales</a> · <a href="/confidentialite/">Confidentialité</a></footer></body></html>
+<p><strong>Vous devez voir</strong> vos horaires enregistrés, avec le bon fuseau horaire.</p>
+</blockquote>
+<h3>2.4 Créer votre type de rendez-vous</h3>
+<p>Un « type de rendez-vous » (appelé <strong>Event Type</strong>, ou <strong>Link</strong> dans les versions récentes de Cal.com) correspond à un format que vous proposez : un appel découverte de 20 minutes, un rendez-vous conseil d'une heure, etc. Chacun a son propre lien.</p>
+<ol>
+<li>Ouvrez la rubrique des types de rendez-vous et cliquez sur <strong>New</strong> (ou <strong>New event type</strong>).</li>
+<li><strong>Title</strong> : un nom clair pour la personne qui réserve, par exemple « Appel découverte, 20 minutes ».</li>
+<li><strong>URL</strong> : la fin du lien, par exemple <code>appel-decouverte</code>.</li>
+<li><strong>Description</strong> : en deux ou trois phrases, ce qui se passe pendant ce rendez-vous et comment s'y préparer. La consigne 2 du chapitre 5 du guide complet vous aide à l'écrire.</li>
+<li><strong>Length</strong> (durée) : 20 minutes, par exemple.</li>
+<li>Enregistrez, puis choisissez le lieu : visio, téléphone ou adresse.</li>
+</ol>
+<blockquote>
+<p><strong>Vous devez voir</strong> votre nouveau type de rendez-vous dans la liste, avec son lien.</p>
+</blockquote>
+<h3>2.5 Les délais qui vous protègent</h3>
+<p>Dans l'onglet <strong>Limits</strong> de votre type de rendez-vous (selon la version, ces réglages sont dans <strong>Advanced</strong>) :</p>
+<ol>
+<li><strong>Minimum notice</strong> (délai minimum) : par exemple 4 heures. Personne ne pourra réserver un créneau qui commence dans moins de 4 heures, ce qui vous laisse le temps de vous organiser.</li>
+<li><strong>Before event</strong> et <strong>After event</strong> (marges avant et après) : par exemple 10 minutes après chaque rendez-vous, pour prendre des notes ou vous déplacer. Cal.com considère ces marges comme du temps occupé.</li>
+<li>Cliquez sur <strong>Save</strong> (ou <strong>Update</strong>).</li>
+</ol>
+<blockquote>
+<p><strong>Astuce</strong> : si vos journées se remplissent trop, Cal.com permet aussi de limiter le nombre de réservations par jour ou par semaine, dans le même onglet.</p>
+</blockquote>
+<h3>2.6 Tester puis partager votre lien</h3>
+<ol>
+<li>Ouvrez votre lien dans une fenêtre de navigation privée (ou depuis votre téléphone).</li>
+<li>Réservez un créneau avec votre seconde adresse email.</li>
+<li>Vérifiez votre agenda et vos deux boîtes mail.</li>
+<li>Annulez ensuite ce rendez-vous de test, depuis le lien d'annulation de l'email de confirmation.</li>
+<li>Ajoutez le lien à votre signature email, à vos profils professionnels et à votre site si vous en avez un. Cal.com fournit aussi un code d'intégration pour afficher le calendrier directement sur une page de votre site.</li>
+</ol>
+<blockquote>
+<p><strong>Vous devez voir</strong> une page de réservation propre, avec vos créneaux libres ; puis le rendez-vous de test dans votre agenda, et un email de confirmation dans chacune des deux boîtes.</p>
+<p><strong>Si ça ne marche pas</strong> : si les horaires affichés sont décalés d'une ou deux heures, le fuseau horaire est mal réglé. Vérifiez-le à deux endroits : votre profil (<strong>Settings</strong>) et vos horaires (<strong>Availability</strong>).</p>
+</blockquote>
+<h3>2.7 Le scénario type : le lien de Sophie</h3>
+<p>Sophie crée son compte, connecte son Google Agenda et coche ses deux calendriers (professionnel et personnel). Ses horaires : du lundi au jeudi, de 9 h 30 à 12 h et de 14 h à 17 h 30. Elle crée « Appel découverte, 20 minutes », en visio, avec un délai minimum de 4 heures et une marge de 10 minutes après chaque appel. Sa description, écrite avec la consigne 2 :</p>
+<pre><code class="language-modele">Un appel de 20 minutes pour faire connaissance et comprendre votre projet d'aménagement. Pensez à avoir sous la main quelques photos de la pièce concernée. Vous recevez le lien de la visio dans l'email de confirmation.
+</code></pre>
+<p>Désormais, quand un prospect lui écrit, elle répond : « Merci pour votre message. Choisissez le créneau qui vous arrange ici : [lien]. La confirmation arrive aussitôt par email. »</p>
+<h3>2.8 Check-list du niveau 1</h3>
+<ul>
+<li>[ ] Compte Cal.com créé, nom et fuseau horaire vérifiés</li>
+<li>[ ] Agenda connecté, tous les calendriers utiles cochés</li>
+<li>[ ] Horaires de rendez-vous enregistrés</li>
+<li>[ ] Type de rendez-vous créé (titre, durée, description, lieu)</li>
+<li>[ ] Délai minimum et marges réglés</li>
+<li>[ ] Réservation de test faite, vue dans l'agenda et dans les deux boîtes, puis annulée</li>
+<li>[ ] Lien ajouté à la signature email</li>
+</ul><p><em>Ce contenu est rédigé par des outils d&#x27;intelligence artificielle (Claude, d&#x27;Anthropic). Les règles et chiffres cités sont vérifiés automatiquement sur les sources officielles indiquées, sans relecture humaine systématique. Publication sous la responsabilité de Romain Dalon Bourbon EI. Information générale, pas un conseil juridique.</em></p><div class="cta"><b>Vous avez le niveau 1. La suite est dans le guide complet.</b><br>Niveaux suivants pas à pas, consignes IA prêtes à copier, glossaire, récapitulatif sur une page. PDF, 20 €*.<br><a href="https://nexiapro.gumroad.com/l/prise-de-rendez-vous-automatisee?utm_source=site&utm_medium=guide">Guide complet : 20 €*</a> &nbsp; <a class="sec" href="https://nexiapro.gumroad.com/l/pack-guides-nexia?utm_source=site&utm_medium=guide">Pack des 7 guides : 59 €* au lieu de 140 €</a><br><small>* TVA éventuelle selon votre pays ajoutée par Gumroad au paiement.</small></div></main><footer>NEXIA, Romain Dalon Bourbon EI. Guides pratiques pour TPE, PME et indépendants, rédigés avec l'IA. Les gains de temps indiqués sont des estimations sur des scénarios types.<br><a href="/mentions-legales/">Mentions légales</a> · <a href="/confidentialite/">Confidentialité</a></footer></body></html>

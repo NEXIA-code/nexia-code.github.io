@@ -1,6 +1,6 @@
 <!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Relancer ses factures impayées automatiquement : guide pas à pas | NEXIA</title><meta name="description" content="À qui s&#x27;adresse ce guide. Aux dirigeants de TPE et PME, aux indépendants et aux artisans qui facturent leurs clients et doivent relancer les impayés…">
-<link rel="canonical" href="https://nexia-code.github.io/guides/relances-factures-impayees/"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%233B82F6%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-size=%2720%27 font-family=%27Arial%27 font-weight=%27700%27 fill=%27white%27 text-anchor=%27middle%27%3EN%3C/text%3E%3C/svg%3E"><meta property="og:type" content="website"><meta property="og:url" content="https://nexia-code.github.io/guides/relances-factures-impayees/"><meta property="og:site_name" content="NEXIA"><meta property="og:title" content="Relancer ses factures impayées automatiquement : guide pas à pas | NEXIA"><meta property="og:description" content="À qui s&#x27;adresse ce guide. Aux dirigeants de TPE et PME, aux indépendants et aux artisans qui facturent leurs clients et doivent relancer les impayés…">
+<title>Relancer ses factures impayées automatiquement : guide pas à pas | NEXIA</title><meta name="description" content="À qui s&#x27;adresse ce guide. Aux dirigeants de TPE et PME, aux indépendants et aux artisans qui facturent leurs clients et relancent eux-mêmes les retards de…">
+<link rel="canonical" href="https://nexia-code.github.io/guides/relances-factures-impayees/"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%233B82F6%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-size=%2720%27 font-family=%27Arial%27 font-weight=%27700%27 fill=%27white%27 text-anchor=%27middle%27%3EN%3C/text%3E%3C/svg%3E"><meta property="og:type" content="website"><meta property="og:url" content="https://nexia-code.github.io/guides/relances-factures-impayees/"><meta property="og:site_name" content="NEXIA"><meta property="og:title" content="Relancer ses factures impayées automatiquement : guide pas à pas | NEXIA"><meta property="og:description" content="À qui s&#x27;adresse ce guide. Aux dirigeants de TPE et PME, aux indépendants et aux artisans qui facturent leurs clients et relancent eux-mêmes les retards de…">
 <style>*{box-sizing:border-box}body{margin:0;font:17px/1.7 -apple-system,'Helvetica Neue',Arial,sans-serif;color:#1E293B;background:#F8FAFC}
 header{background:#0F172A;color:#fff;padding:18px 20px}header a{color:#fff;text-decoration:none;font-weight:700;letter-spacing:.3em}
 .chip{background:#3B82F6;border-radius:6px;padding:5px 12px}main{max-width:760px;margin:0 auto;padding:28px 18px 60px}
@@ -13,60 +13,267 @@ pre code{background:none;color:inherit}.cta{background:#0F172A;color:#fff;border
 main{overflow-wrap:break-word}pre{max-width:100%;overflow-x:auto}table{display:block;max-width:100%;overflow-x:auto;border-collapse:collapse}td,th{white-space:nowrap;padding:6px 10px;border-bottom:1px solid #E2E8F0}.cta a.sec{background:transparent;border:2px solid #fff}main a{color:#1D4ED8}.cta a{color:#fff}header{white-space:normal}
 footer{color:#64748B;font-size:.85em;text-align:center;padding:30px 18px}</style></head><body><header><a href="/"><span class="chip">N E X I A</span></a> &nbsp; l'IA pratique pour les petites entreprises</header>
 <main><h1>Ne perdez plus une facture impayée</h1><p><em>Extrait offert du guide NEXIA : présentation, premiers chapitres et niveau 1 en entier.</em></p><div class="cta"><b>Le niveau 1 de ce guide est offert ci-dessous.</b><br>Le guide complet (PDF) ajoute les niveaux suivants pas à pas, des consignes IA prêtes à copier, un glossaire et un récapitulatif.<br><a href="https://nexiapro.gumroad.com/l/relances-factures-impayees?utm_source=site&utm_medium=guide">Guide complet : 20 €*</a> &nbsp; <a class="sec" href="https://nexiapro.gumroad.com/l/pack-guides-nexia?utm_source=site&utm_medium=guide">Pack des 7 guides : 59 €* au lieu de 140 €</a><br><small>* TVA éventuelle selon votre pays ajoutée par Gumroad au paiement.</small></div><h2>Avant de commencer</h2>
-<p><strong>À qui s'adresse ce guide.</strong> Aux dirigeants de TPE et PME, aux indépendants et aux artisans qui facturent leurs clients et doivent relancer les impayés eux-mêmes, sans service comptable dédié. La relance, quand elle est manuelle, se fait toujours trop tard : on s'en souvient trois semaines après l'échéance, au pire moment, avec un ton qui trahit l'agacement plus que la fermeté professionnelle. Aucune compétence technique requise, aucune ligne de code.</p>
-<p><strong>Ce que vous aurez à la fin.</strong> Trois niveaux indépendants :</p>
+<p><strong>À qui s'adresse ce guide.</strong> Aux dirigeants de TPE et PME, aux indépendants et aux artisans qui facturent leurs clients et relancent eux-mêmes les retards de paiement, sans service comptable dédié. Quand la relance dépend de la mémoire, elle part souvent trop tard, ou pas du tout. Aucune compétence technique n'est requise, aucune ligne de code.</p>
+<p><strong>Ce que vous aurez à la fin.</strong> Trois niveaux, à suivre dans l'ordre :</p>
 <ol>
-<li><strong>Niveau 1 (20 minutes de mise en place)</strong> : un tableau centralisé de toutes vos factures en attente de paiement, avec leur échéance, à un seul endroit, fini le mélange entre votre logiciel de facturation, vos emails et votre mémoire.</li>
-<li><strong>Niveau 2 (30 minutes)</strong> : trois relances automatiques, rédigées par l'IA avec un ton qui monte progressivement (rappel courtois à J+7, relance ferme à J+15, mise en demeure amiable à J+30), envoyées sans que vous ayez à y penser.</li>
-<li><strong>Niveau 3 (30 minutes)</strong> : un tableau de bord des impayés consultable en un clic, avec une alerte dès qu'un client dépasse un seuil de retard ou de montant que vous définissez.</li>
+<li><strong>Niveau 1 (20 minutes, gratuit)</strong> : un tableau Google Sheets de toutes vos factures en attente, qui calcule seul le nombre de jours de retard et vous dit quelle relance envoyer aujourd'hui.</li>
+<li><strong>Niveau 2 (45 minutes, gratuit)</strong> : chaque matin, Make prépare dans Gmail les relances du jour (rappel courtois à 7 jours de retard, relance ferme à 15 jours, dernier rappel amiable à 30 jours), à partir de trois modèles écrits une fois avec l'aide de Claude. Vous relisez et vous envoyez.</li>
+<li><strong>Niveau 3 (30 minutes, gratuit)</strong> : un tableau de bord de vos impayés, un historique semaine par semaine et, chaque lundi matin, une alerte par email si le total en retard dépasse le seuil que vous avez choisi.</li>
 </ol>
-<p><strong>Combien de temps vous pouvez en attendre.</strong> À titre d'estimation, sur un scénario type : le temps de rédaction et d'envoi manuel des relances (souvent 10 à 20 minutes par facture en retard, sans compter le temps passé à s'en souvenir) ramené à quelques secondes de vérification par semaine. Le vrai gain, au-delà du temps : des relances envoyées systématiquement à la bonne date, jamais oubliées, jamais 3 semaines trop tard. Ce sont des estimations : votre gain dépend de votre volume de facturation.</p>
+<p><strong>Combien de temps vous pouvez en attendre.</strong> Sur le scénario type décrit plus bas, nous estimons que repérer les retards et rédiger les relances à la main prend 10 à 20 minutes par facture concernée, sans compter les relances oubliées. Avec le guide, il reste à relire et envoyer des brouillons déjà prêts, soit une à deux minutes par relance. Ce n'est pas une mesure : votre gain dépend de votre volume de factures et du nombre de retards.</p>
+<p><em>Estimation sur un scénario type (une vingtaine de factures par mois, quelques retards), pas une mesure :</em></p>
+<table>
+<thead>
+<tr>
+<th>Tâche</th>
+<th>Avant</th>
+<th>Avec le guide</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Savoir qui est en retard</td>
+<td>parcourir le logiciel de facturation et les relevés bancaires</td>
+<td>ouvrir le tableau, colonne « Jours de retard »</td>
+</tr>
+<tr>
+<td>Savoir quelle relance envoyer</td>
+<td>se souvenir de la précédente, ou ne pas la faire</td>
+<td>lire la colonne « Action du jour »</td>
+</tr>
+<tr>
+<td>Rédiger une relance</td>
+<td>10 à 20 minutes, ton variable selon l'humeur</td>
+<td>brouillon prêt dans Gmail, relu en une à deux minutes</td>
+</tr>
+<tr>
+<td>Connaître le total en retard</td>
+<td>additionner à la main</td>
+<td>lire le tableau de bord, recevoir l'alerte</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Le scénario type suivi dans ce guide.</strong> Claire (personnage fictif) est graphiste indépendante. Elle émet une vingtaine de factures par mois à des clients professionnels, payables à 30 jours. Elle s'aperçoit souvent d'un retard en regardant son compte en banque, des semaines après l'échéance. À chaque niveau, vous verrez ce que Claire construit, jusqu'à la facture n° 2026-041 de 1 200 € qu'elle suit du premier rappel au paiement.</p>
 <p><strong>Ce dont vous avez besoin.</strong></p>
 <ul>
-<li>Un ordinateur, une adresse email professionnelle</li>
-<li>Vos factures en cours : peu importe leur origine (logiciel de facturation, factures Word, factures papier saisies à la main), l'essentiel est de pouvoir lister client, montant, date d'échéance</li>
-<li>Budget : 0 € pour démarrer, quelques euros par mois si votre volume grandit (détaillé au fil du guide)</li>
+<li>Un ordinateur, Mac ou PC, avec un navigateur récent (Chrome, Edge, Firefox ou Safari).</li>
+<li>Un compte Google (gratuit) pour Google Sheets et Gmail. Si vous écrivez à vos clients depuis une autre messagerie, les niveaux 1 et 3 restent utilisables tels quels ; le niveau 2 du guide complet décrit Gmail uniquement.</li>
+<li>La liste de vos factures en cours, peu importe leur origine (logiciel de facturation, Word, papier) : client, adresse email de facturation, numéro, montant, date d'échéance.</li>
 </ul>
-<p><strong>Ce que ce guide n'est pas.</strong> Un conseil juridique sur le recouvrement de créances. Les modèles de relance de ce guide restent dans le registre commercial et amiable ; au-delà de 30 à 45 jours de retard sans réponse, la mise en demeure formelle et, le cas échéant, la procédure de recouvrement relèvent de votre expert-comptable ou d'un professionnel du droit, pas de ce guide.</p>
-<p><strong>Comment lire ce guide.</strong> Manipulations numérotées, points de contrôle « Vous devez voir », encadrés « Si ça ne marche pas », glossaire final. Chaque niveau est autonome : commencez par celui qui répond à votre besoin le plus pressant.</p>
-<hr />
-<h2>Chapitre 1. Comprendre en 3 minutes</h2>
-<h3>1.1 Pourquoi la relance manuelle échoue presque toujours</h3>
-<p>Trois causes reviennent systématiquement :</p>
+<p><strong>Ce que cela coûte.</strong> Les trois niveaux tiennent dans les offres gratuites : Google Sheets et Gmail avec un compte Google, Make avec son offre gratuite (1 000 crédits par mois, deux scénarios actifs au plus, un passage toutes les 15 minutes au plus souvent), Claude avec son offre gratuite sur claude.ai. Sur le scénario type, nous estimons la consommation à une centaine de crédits Make par mois (calcul au chapitre 4 du guide complet). Offres vérifiées le 2 octobre 2026, susceptibles de changer.</p>
+<p><strong>Ce que ce guide n'est pas.</strong> Un service de recouvrement, ni un conseil juridique. Les relances de ce guide restent amiables. Un email ne remplace pas une mise en demeure en bonne et due forme (section 1.3). Au-delà du dernier rappel amiable, la suite se décide avec votre expert-comptable, un avocat ou un commissaire de justice.</p>
+<p><strong>Comment lire ce guide.</strong> Chaque manipulation est numérotée, avec le nom exact du bouton ou du menu en gras. Après chaque étape importante, un encadré « Vous devez voir » vous confirme que vous êtes au bon endroit, et un encadré « Si ça ne marche pas » vous dépanne. Les modèles d'email et les consignes à donner à l'IA sont présentés dans des cadres « à copier » : remplacez ce qui est entre crochets et en majuscules. Les mots techniques sont expliqués à leur première apparition et repris dans le glossaire. Vous pouvez vous arrêter à la fin de n'importe quel niveau : chacun fonctionne seul.</p>
+<h2>Chapitre 1. Comprendre en 5 minutes</h2>
+<h3>1.1 Pourquoi la relance manuelle échoue</h3>
+<p>Trois causes reviennent :</p>
 <ul>
-<li><strong>L'oubli</strong> : sans système, la relance dépend de la mémoire, or l'attention se porte toujours sur l'urgence du jour, jamais sur la facture du mois dernier.</li>
-<li><strong>Le ton mal calibré</strong> : une première relance trop dure abîme la relation client ; une troisième relance trop molle ne produit aucun effet. Le bon ton dépend du nombre de jours de retard, pas de l'humeur du moment.</li>
-<li><strong>Le temps de rédaction</strong> : rédiger un email de relance correctement formulé prend du temps que l'on remet toujours à plus tard.</li>
+<li><strong>L'oubli.</strong> Sans système, la relance dépend de votre mémoire. Or votre attention va à l'urgence du jour, pas à la facture du mois dernier.</li>
+<li><strong>Le ton mal réglé.</strong> Une première relance trop sèche abîme la relation ; une troisième trop molle ne produit rien. Le bon ton dépend du nombre de jours de retard, pas de l'humeur du moment.</li>
+<li><strong>Le temps de rédaction.</strong> Écrire une relance correcte prend un quart d'heure qu'on remet toujours à plus tard.</li>
 </ul>
-<p>L'automatisation no-code et l'IA résolvent exactement ces trois causes : le système ne relance jamais en retard, le ton est calibré une fois pour toutes selon le nombre de jours, et la rédaction est instantanée.</p>
+<p>Le système de ce guide répond aux trois : le tableau calcule chaque jour qui relancer, les trois modèles fixent le ton une fois pour toutes, et Make prépare les emails.</p>
 <h3>1.2 Les outils du guide</h3>
-<p><strong>Google Sheets</strong> : le tableur de Google, gratuit, qui sert de tableau centralisé de vos factures.</p>
-<p><strong>Make</strong> : le chef d'orchestre qui vérifie chaque jour les échéances et déclenche les relances au bon moment. Plan gratuit suffisant pour ce guide.</p>
-<p><strong>Claude</strong> : l'IA qui rédige chaque relance avec le ton adapté à son niveau, utilisée via son API (une « prise » pour logiciels, quelques euros de crédit pour plusieurs mois d'usage).</p>
-<h3>1.3 L'avertissement honnête du guide</h3>
-<p>Une relance automatique n'est utile que si le tableau des factures est tenu à jour : si un client a payé et que la ligne n'est pas marquée « Payé », l'automatisation enverra une relance à tort. Le chapitre 2 est conçu pour que cette mise à jour prenne quelques secondes, précisément pour que cette discipline soit tenable dans la durée. Vérifiez toujours, avant d'activer un scénario, qu'il fonctionne sur un cas test plutôt que sur vos vrais clients.</p>
-<hr />
-<h2>Chapitre 2. Niveau 1 : le tableau centralisé de vos factures (20 minutes)</h2>
-<h3>2.1 Créer votre feuille de suivi</h3>
-<ol>
-<li>Créez un Google Sheets nommé « Suivi factures [votre entreprise] »</li>
-<li>Créez ces colonnes : <strong>Client</strong>, <strong>Email client</strong>, <strong>Numéro de facture</strong>, <strong>Montant</strong>, <strong>Date d'échéance</strong>, <strong>Statut</strong> (à créer en liste déroulante : « En attente », « Relance 1 envoyée », « Relance 2 envoyée », « Relance 3 envoyée », « Payé », « Litige »), <strong>Dernière relance le</strong></li>
-<li>Pour la colonne Statut, sélectionnez la colonne puis Données &gt; Validation des données &gt; Liste déroulante, et entrez les 6 valeurs ci-dessus</li>
-</ol>
-<blockquote>
-<p><strong>Vous devez voir</strong> : une feuille avec vos colonnes et un menu déroulant propre dans la colonne Statut, sans texte libre qui pourrait varier d'une ligne à l'autre.</p>
-</blockquote>
-<h3>2.2 Alimenter le tableau</h3>
 <ul>
-<li><strong>Si votre logiciel de facturation exporte en CSV ou Excel</strong> : importez directement l'export dans un onglet séparé, puis copiez les colonnes utiles dans votre feuille de suivi. Beaucoup de logiciels de facturation français permettent aussi un export automatique périodique : vérifiez dans leur aide.</li>
-<li><strong>Si vous facturez avec un simple document Word ou papier</strong> : ajoutez chaque facture à la main au moment de son émission, 30 secondes par ligne. C'est la version la plus honnête pour démarrer.</li>
+<li><strong>Google Sheets</strong> : le tableur en ligne de Google, gratuit. Il contient la liste de vos factures et fait les calculs.</li>
+<li><strong>Make</strong> : un service d'automatisation. Une automatisation est une consigne donnée une seule fois à un ordinateur, qu'il exécute ensuite sans vous. Dans Make, cette consigne s'appelle un <strong>scénario</strong> : une chaîne de <strong>modules</strong> (les maillons), chacun faisant une action dans un service (lire une ligne de Google Sheets, préparer un email dans Gmail). Make compte sa consommation en <strong>crédits</strong> : en règle générale, chaque action d'un module coûte un crédit.</li>
+<li><strong>Gmail</strong> : votre messagerie, où Make dépose les brouillons de relance.</li>
+<li><strong>Claude</strong> : l'assistant d'intelligence artificielle (IA) d'Anthropic, utilisé en conversation sur claude.ai. Il vous aide à écrire vos trois modèles de relance dans votre ton, puis à traiter les cas particuliers (chapitre 5 du guide complet).</li>
 </ul>
-<h3>2.3 La règle d'or : une ligne = une facture, un statut à jour</h3>
+<p><strong>Un choix volontaire : l'IA écrit les modèles, pas chaque email.</strong> Il serait possible de faire rédiger chaque relance par l'IA au moment de l'envoi. Ce guide ne le fait pas, pour trois raisons. Un email de relance engage votre entreprise : son texte doit être exact et toujours le même pour une même situation. Une IA peut se tromper sur un montant ou ajouter une phrase maladroite. Et chaque appel enverrait les données de vos clients à un service de plus. Les modèles sont donc écrits une fois, relus par vous, puis remplis automatiquement avec les informations de chaque facture.</p>
+<h3>1.3 Ce que dit la règle, en bref</h3>
+<p>Ce qui suit est un résumé d'information générale, vérifié le 2 octobre 2026. Les liens mènent aux fiches officielles.</p>
+<p><strong>Entre professionnels (vos clients sont des entreprises).</strong></p>
+<ul>
+<li><strong>Délai de paiement.</strong> Sauf accord différent, 30 jours après la réception de la marchandise ou la fin de la prestation. Si un délai est convenu au contrat, il ne peut pas dépasser 60 jours après la date d'émission de la facture, ou 45 jours fin de mois s'il est mentionné au contrat. Certains secteurs ont des règles particulières. Source : entreprendre.service-public.gouv.fr/vosdroits/F23211 (fiche vérifiée par l'administration le 7 août 2026).</li>
+<li><strong>Pénalités de retard.</strong> Elles sont dues dès le lendemain de la date de paiement inscrite sur la facture, sans qu'un rappel soit nécessaire. Leur taux ne peut pas être inférieur à 3 fois le taux de l'intérêt légal ; à défaut de taux prévu, c'est le taux de refinancement de la Banque centrale européenne majoré de 10 points, soit 12,40 % pour le second semestre 2026 selon la même fiche F23211.</li>
+<li><strong>Indemnité forfaitaire pour frais de recouvrement.</strong> 40 € par facture payée en retard, due une seule fois par facture (article D441-5 du Code de commerce, fiche F23211).</li>
+<li><strong>Ce que la facture doit indiquer.</strong> L'article L441-9 du Code de commerce, dans sa version en vigueur jusqu'au 1er janvier 2027, impose que la facture précise notamment le taux des pénalités de retard et le montant de l'indemnité forfaitaire pour frais de recouvrement (legifrance.gouv.fr, article L441-9 ; fiche entreprendre.service-public.gouv.fr/vosdroits/F31808, vérifiée par l'administration le 11 août 2026). Si vos factures ne portent pas ces mentions, la consigne 5 du chapitre 5 du guide complet vous aide à préparer la question pour votre comptable.</li>
+</ul>
+<p><strong>Avec des particuliers.</strong> Les pénalités de retard du Code de commerce et l'indemnité de 40 € ne concernent que les clients professionnels (fiche F31808). Ne les mentionnez pas dans une relance adressée à un particulier : supprimez alors le deuxième paragraphe du modèle 3 (encadré Attention, section 3.3).</p>
+<p><strong>Relance, mise en demeure, recouvrement : trois choses différentes.</strong></p>
 <ol>
-<li>Dès qu'un paiement arrive (virement, chèque, prélèvement), ouvrez la ligne correspondante et passez son statut à « Payé » avant toute autre tâche : c'est le geste qui protège vos clients d'une relance envoyée à tort</li>
-<li>Une fois par semaine, à un créneau fixe, parcourez la colonne Statut pour vérifier qu'aucune ligne n'est restée oubliée</li>
+<li><strong>La relance</strong> n'est pas obligatoire mais presque toujours utilisée : un rappel par téléphone ou par écrit, efficace en cas d'oubli ou de difficulté passagère. C'est l'objet de ce guide.</li>
+<li><strong>La mise en demeure</strong> est une demande formelle de payer. Selon la fiche officielle sur le recouvrement amiable, elle prend la forme d'une sommation faite par un commissaire de justice, d'une lettre recommandée avec avis de réception qui exprime clairement la demande, ou découle du contrat s'il le prévoit (entreprendre.service-public.gouv.fr/vosdroits/F38586, vérifiée par l'administration le 27 novembre 2024). La fiche ne cite pas l'email simple parmi ces formes : le dernier rappel de ce guide n'est donc pas présenté comme une mise en demeure.</li>
+<li><strong>Le recouvrement</strong> vient ensuite : procédure simplifiée confiée à un commissaire de justice pour une créance de 5 000 € au plus, intérêts compris (service-public.gouv.fr/particuliers/vosdroits/F1746, vérifiée le 1er septembre 2026), ou injonction de payer devant le tribunal (entreprendre.service-public.gouv.fr/vosdroits/F38156). Ces démarches dépassent ce guide.</li>
+</ol>
+<p><strong>Facture électronique.</strong> Selon la fiche F31808, l'émission de factures électroniques devient obligatoire pour les PME et les micro-entreprises à partir du 1er septembre 2027. Cela ne change pas la logique de ce guide : quel que soit votre outil de facturation, il vous faut savoir qui doit quoi et depuis quand.</p>
+<h3>1.4 Les coordonnées de vos clients sont des données personnelles</h3>
+<p>Votre tableau contient des noms et des adresses email. Même chez un client entreprise, l'adresse d'une personne (prenom.nom@entreprise.fr) est une donnée personnelle au sens du RGPD (règlement général sur la protection des données). Avec ce montage, ces données sont stockées chez Google (Sheets et Gmail) et traitées chaque jour par Make, un service tiers qui agit pour votre compte, pour préparer les brouillons. La politique de confidentialité de Make prévoit des transferts possibles de données hors de l'Union européenne (make.com/en/privacy-notice). Aucune donnée de client n'est envoyée à Claude : vous ne lui donnez que des exemples inventés.</p>
+<p>Quatre réflexes simples, sans prétendre vous rendre conforme :</p>
+<ul>
+<li>ne mettez dans le tableau que ce qui sert à relancer (pas de commentaire sur la personne, pas de coordonnées bancaires) ;</li>
+<li>préférez l'adresse de facturation générique de l'entreprise cliente (compta@...) quand elle existe ;</li>
+<li>retirez les lignes anciennes une fois la facture payée et archivée dans votre comptabilité ;</li>
+<li>informez vos clients que leurs coordonnées de facturation servent au suivi des paiements et passent par des services tiers (Google, Make), par exemple dans vos conditions générales de vente ou votre politique de confidentialité.</li>
+</ul>
+<p>Pour savoir précisément comment le RGPD s'applique à votre entreprise, consultez le site de la CNIL (cnil.fr) ou un professionnel.</p>
+<h2>Chapitre 2. Niveau 1 : le tableau de suivi de vos factures (20 minutes, gratuit)</h2>
+<p>À la fin de ce chapitre, un seul tableau vous dit, chaque jour, qui doit encore payer, depuis combien de jours, et quelle relance envoyer.</p>
+<h3>2.1 Créer la feuille et régler la langue</h3>
+<ol>
+<li>Ouvrez sheets.google.com avec votre compte Google, puis cliquez sur <strong>Vide</strong> pour créer une feuille.</li>
+<li>Nommez-la en haut à gauche : « Suivi des factures ».</li>
+<li>Cliquez sur <strong>Fichier</strong>, puis <strong>Paramètres</strong>. Sous <strong>Général</strong>, vérifiez que <strong>Paramètres régionaux</strong> indique <strong>France</strong>, puis enregistrez.</li>
+<li>En bas de l'écran, double-cliquez sur l'onglet « Feuille 1 » et renommez-le « Suivi ».</li>
+<li>Cliquez sur le <strong>+</strong> en bas à gauche pour ajouter un onglet, et nommez-le « Paramètres ».</li>
 </ol>
 <blockquote>
-<p><strong>Vous devez voir</strong> : à tout moment, un coup d'œil à la feuille vous dit exactement qui doit encore payer, combien, et depuis quand.</p>
-<p><strong>Si ça ne marche pas</strong> : si vous avez plusieurs personnes qui facturent ou encaissent, désignez une seule responsable de la mise à jour du statut « Payé » : deux personnes qui pensent chacune que l'autre s'en charge est la cause la plus fréquente d'un tableau qui se désynchronise.</p>
-</blockquote><p><em>Ce contenu est rédigé par des outils d&#x27;intelligence artificielle (Claude, d&#x27;Anthropic). Les règles et chiffres cités sont vérifiés automatiquement sur les sources officielles indiquées, sans relecture humaine systématique. Publication sous la responsabilité de Romain Dalon Bourbon EI. Information générale, pas un conseil juridique.</em></p><div class="cta"><b>Vous avez le niveau 1. La suite est dans le guide complet.</b><br>Niveaux suivants pas à pas, consignes IA prêtes à copier, glossaire, récapitulatif sur une page. PDF, 20 €*.<br><a href="https://nexiapro.gumroad.com/l/relances-factures-impayees?utm_source=site&utm_medium=guide">Guide complet : 20 €*</a> &nbsp; <a class="sec" href="https://nexiapro.gumroad.com/l/pack-guides-nexia?utm_source=site&utm_medium=guide">Pack des 7 guides : 59 €* au lieu de 140 €</a><br><small>* TVA éventuelle selon votre pays ajoutée par Gumroad au paiement.</small></div><h2>Articles sur ce sujet</h2><div class="carte"><a href="/articles/2026-10-01-relancer-facture-impayee/">Comment relancer une facture impayée : étapes, délais et modèle de relance</a></div></main><footer>NEXIA, Romain Dalon Bourbon EI. Guides pratiques pour TPE, PME et indépendants, rédigés avec l'IA. Les gains de temps indiqués sont des estimations sur des scénarios types.<br><a href="/mentions-legales/">Mentions légales</a> · <a href="/confidentialite/">Confidentialité</a></footer></body></html>
+<p><strong>Vous devez voir</strong> : deux onglets en bas de l'écran, « Suivi » et « Paramètres ». Les paramètres régionaux sur France garantissent les dates au format jour/mois/année et le point-virgule comme séparateur dans les formules de ce guide.</p>
+</blockquote>
+<h3>2.2 Les colonnes</h3>
+<p>Dans l'onglet « Suivi », tapez ces titres en ligne 1, une colonne chacun, dans cet ordre exact (les formules en dépendent) :</p>
+<table>
+<thead>
+<tr>
+<th>Colonne</th>
+<th>Titre</th>
+<th>Ce que vous y mettez</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Client</td>
+<td>nom de l'entreprise ou de la personne</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Email</td>
+<td>adresse de facturation du client</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Facture</td>
+<td>numéro de la facture</td>
+</tr>
+<tr>
+<td>D</td>
+<td>Montant TTC</td>
+<td>montant à payer, en nombre</td>
+</tr>
+<tr>
+<td>E</td>
+<td>Échéance</td>
+<td>date limite de paiement</td>
+</tr>
+<tr>
+<td>F</td>
+<td>Statut</td>
+<td>choisi dans une liste (étape suivante)</td>
+</tr>
+<tr>
+<td>G</td>
+<td>Dernière relance</td>
+<td>date, remplie automatiquement au niveau 2 du guide complet</td>
+</tr>
+<tr>
+<td>H</td>
+<td>Jours de retard</td>
+<td>formule (section 2.4)</td>
+</tr>
+<tr>
+<td>I</td>
+<td>Action du jour</td>
+<td>formule (section 2.4)</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Sélectionnez la colonne D en cliquant sur la lettre D, puis <strong>Format</strong>, <strong>Nombre</strong>, <strong>Devise</strong>.</li>
+<li>Sélectionnez les colonnes E et G, puis <strong>Format</strong>, <strong>Nombre</strong>, <strong>Date</strong>.</li>
+<li>Sélectionnez la colonne H, puis <strong>Format</strong>, <strong>Nombre</strong>, <strong>Nombre</strong>.</li>
+</ol>
+<h3>2.3 La liste des statuts</h3>
+<ol>
+<li>Sélectionnez les cellules F2 à F500.</li>
+<li>Cliquez sur <strong>Insertion</strong>, puis <strong>Menu déroulant</strong>. Un panneau s'ouvre à droite.</li>
+<li>Saisissez une option par case, en cliquant sur <strong>Ajouter un autre élément</strong> entre chacune : <code>En attente</code>, <code>Relance 1</code>, <code>Relance 2</code>, <code>Relance 3</code>, <code>Payé</code>, <code>Litige</code>.</li>
+<li>Cliquez sur <strong>OK</strong>.</li>
+</ol>
+<p>Le sens de chaque statut :</p>
+<ul>
+<li><strong>En attente</strong> : facture envoyée, aucune relance encore.</li>
+<li><strong>Relance 1</strong>, <strong>Relance 2</strong>, <strong>Relance 3</strong> : la dernière relance envoyée.</li>
+<li><strong>Payé</strong> : le paiement est arrivé. Plus aucune relance ne partira.</li>
+<li><strong>Litige</strong> : le client conteste. Les relances automatiques s'arrêtent ; vous traitez le cas vous-même (consigne 3 du chapitre 5 du guide complet).</li>
+</ul>
+<blockquote>
+<p><strong>Si ça ne marche pas</strong> : si le menu <strong>Menu déroulant</strong> n'apparaît pas dans <strong>Insertion</strong>, passez par <strong>Données</strong>, <strong>Validation des données</strong>, <strong>Ajouter une règle</strong>, puis choisissez <strong>Menu déroulant</strong> dans les critères. Écrivez les statuts exactement comme ci-dessus, majuscule et accent compris : les formules les comparent lettre par lettre.</p>
+</blockquote>
+<h3>2.4 Les deux formules qui font le travail</h3>
+<p><strong>La date du jour.</strong> Dans l'onglet « Paramètres », tapez <code>Date du jour</code> en A1, puis en B1 :</p>
+<pre><code class="language-modele">=AUJOURDHUI()
+</code></pre>
+<p>Au niveau 2 du guide complet, Make remplacera cette formule par la date du jour, écrite chaque matin.</p>
+<p><strong>Les jours de retard.</strong> Revenez dans l'onglet « Suivi » et tapez en H2 :</p>
+<pre><code class="language-modele">=SI(OU(E2=&quot;&quot;;F2=&quot;Payé&quot;;F2=&quot;Litige&quot;);&quot;&quot;;'Paramètres'!$B$1-E2)
+</code></pre>
+<p>Le résultat est le nombre de jours écoulés depuis l'échéance. Il est négatif tant que la facture n'est pas encore due, et vide pour une facture payée ou en litige.</p>
+<p><strong>L'action du jour.</strong> Tapez en I2 :</p>
+<pre><code class="language-modele">=SI(H2=&quot;&quot;;&quot;&quot;;SI(ET(F2=&quot;En attente&quot;;H2&gt;=7);&quot;Relance 1&quot;;SI(ET(F2=&quot;Relance 1&quot;;H2&gt;=15;'Paramètres'!$B$1-G2&gt;=7);&quot;Relance 2&quot;;SI(ET(F2=&quot;Relance 2&quot;;H2&gt;=30;'Paramètres'!$B$1-G2&gt;=9);&quot;Relance 3&quot;;&quot;&quot;))))
+</code></pre>
+<p>En clair : une facture « En attente » à 7 jours de retard ou plus appelle la relance 1 ; une facture déjà relancée une fois, à 15 jours ou plus, appelle la relance 2 ; à 30 jours ou plus, la relance 3. La condition sur la colonne G laisse au moins 7 jours entre le premier rappel et la relance ferme, et 9 jours entre la relance ferme et le dernier rappel, pour que le délai de 8 jours annoncé par le modèle 2 soit écoulé, même pour une facture saisie tardivement.</p>
+<p>Pour appliquer les formules à toutes les lignes :</p>
+<ol>
+<li>Sélectionnez H2 et I2, puis copiez (Cmd C sur Mac, Ctrl C sur PC).</li>
+<li>Sélectionnez H3 à I500, puis collez (Cmd V ou Ctrl V).</li>
+</ol>
+<blockquote>
+<p><strong>Vous devez voir</strong> : sur une ligne d'essai avec une échéance passée de 10 jours et le statut « En attente », 10 en colonne H et « Relance 1 » en colonne I. Passez le statut à « Payé » : H et I se vident.</p>
+<p><strong>Si ça ne marche pas</strong> : « #ERROR! » ou « Erreur d'analyse de formule » vient presque toujours du séparateur. Vérifiez que les paramètres régionaux sont sur France (section 2.1). Si H affiche une date au lieu d'un nombre, reformatez la colonne H en <strong>Nombre</strong>. Si « #VALUE! » apparaît, la date d'échéance a été tapée comme du texte : retapez-la au format 15/09/2026.</p>
+</blockquote>
+<p><strong>Le seuil de 7, 15 et 30 jours</strong> est un choix courant, pas une règle. Vous pouvez remplacer ces nombres dans la formule I2 (puis recopier) ; la consigne 1 du chapitre 5 du guide complet vous aide à les choisir selon votre activité.</p>
+<h3>2.5 Repérer d'un coup d'œil</h3>
+<ol>
+<li>Sélectionnez la colonne F.</li>
+<li>Cliquez sur <strong>Format</strong>, puis <strong>Mise en forme conditionnelle</strong>.</li>
+<li>Dans les règles de mise en forme, choisissez <strong>Le texte contient</strong>, tapez <code>Relance 3</code>, choisissez un fond orange, puis cliquez sur <strong>OK</strong>.</li>
+</ol>
+<p>Les factures arrivées au dernier rappel amiable ressortent : ce sont celles qui demandent votre décision (chapitre 4 du guide complet).</p>
+<h3>2.6 Alimenter le tableau et la règle d'or</h3>
+<ul>
+<li><strong>Si votre logiciel de facturation exporte en CSV ou en Excel</strong> : importez l'export dans un onglet séparé (<strong>Fichier</strong>, <strong>Importer</strong>), puis copiez les colonnes utiles dans « Suivi ».</li>
+<li><strong>Sinon</strong> : ajoutez chaque facture à la main au moment où vous l'émettez, avec le statut « En attente ». Comptez 30 secondes par ligne.</li>
+</ul>
+<p><strong>La règle d'or : un paiement reçu, une ligne passée à « Payé », avant toute autre tâche.</strong> C'est le seul geste qui empêche une relance de partir vers un client qui a déjà payé. Une fois par semaine, à heure fixe, rapprochez vos encaissements de la colonne Statut.</p>
+<blockquote>
+<p><strong>Si ça ne marche pas</strong> : si plusieurs personnes encaissent ou facturent, désignez une seule personne responsable du statut « Payé ». Deux personnes qui pensent chacune que l'autre s'en charge, c'est la cause la plus fréquente d'un tableau faux.</p>
+</blockquote>
+<h3>2.7 Le scénario type : le tableau de Claire</h3>
+<p>Le 2 octobre, Claire saisit ses 18 factures en cours. Une ligne retient son attention :</p>
+<table>
+<thead>
+<tr>
+<th>Client</th>
+<th>Facture</th>
+<th>Montant TTC</th>
+<th>Échéance</th>
+<th>Statut</th>
+<th>Jours de retard</th>
+<th>Action du jour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Atelier Durand (fictif)</td>
+<td>2026-041</td>
+<td>1 200,00 €</td>
+<td>15/09/2026</td>
+<td>En attente</td>
+<td>17</td>
+<td>Relance 1</td>
+</tr>
+</tbody>
+</table>
+<p>La facture de 1 200 € est en retard de 17 jours et personne ne l'a encore relancée. Sans le tableau, Claire l'aurait sans doute découverte plus tard encore. Elle envoie elle-même, ce jour-là, le rappel courtois (modèle 1 de la section 3.3), passe le statut à « Relance 1 » et note la date en colonne G. Au niveau 2 du guide complet, Make fera ce travail de préparation pour elle.</p>
+<h3>2.8 Check-list du niveau 1</h3>
+<ul>
+<li>[ ] Paramètres régionaux sur France</li>
+<li>[ ] Onglets « Suivi » et « Paramètres » créés</li>
+<li>[ ] Colonnes A à I dans l'ordre, formats Devise, Date et Nombre appliqués</li>
+<li>[ ] Menu déroulant des six statuts en colonne F</li>
+<li>[ ] <code>=AUJOURDHUI()</code> en B1 de « Paramètres »</li>
+<li>[ ] Formules H et I recopiées jusqu'à la ligne 500 et testées sur une ligne d'essai</li>
+<li>[ ] Toutes les factures en cours saisies</li>
+<li>[ ] Une personne responsable du statut « Payé »</li>
+</ul><p><em>Ce contenu est rédigé par des outils d&#x27;intelligence artificielle (Claude, d&#x27;Anthropic). Les règles et chiffres cités sont vérifiés automatiquement sur les sources officielles indiquées, sans relecture humaine systématique. Publication sous la responsabilité de Romain Dalon Bourbon EI. Information générale, pas un conseil juridique.</em></p><div class="cta"><b>Vous avez le niveau 1. La suite est dans le guide complet.</b><br>Niveaux suivants pas à pas, consignes IA prêtes à copier, glossaire, récapitulatif sur une page. PDF, 20 €*.<br><a href="https://nexiapro.gumroad.com/l/relances-factures-impayees?utm_source=site&utm_medium=guide">Guide complet : 20 €*</a> &nbsp; <a class="sec" href="https://nexiapro.gumroad.com/l/pack-guides-nexia?utm_source=site&utm_medium=guide">Pack des 7 guides : 59 €* au lieu de 140 €</a><br><small>* TVA éventuelle selon votre pays ajoutée par Gumroad au paiement.</small></div><h2>Articles sur ce sujet</h2><div class="carte"><a href="/articles/2026-10-01-relancer-facture-impayee/">Comment relancer une facture impayée : étapes, délais et modèle de relance</a></div></main><footer>NEXIA, Romain Dalon Bourbon EI. Guides pratiques pour TPE, PME et indépendants, rédigés avec l'IA. Les gains de temps indiqués sont des estimations sur des scénarios types.<br><a href="/mentions-legales/">Mentions légales</a> · <a href="/confidentialite/">Confidentialité</a></footer></body></html>
