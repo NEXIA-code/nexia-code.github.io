@@ -1,6 +1,6 @@
 <!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Créer un outil métier sans code : guide pas à pas | NEXIA</title><meta name="description" content="À qui s&#x27;adresse ce guide. Aux dirigeants de TPE et PME, aux indépendants et aux responsables d&#x27;équipe qui gèrent une partie de leur activité dans des…">
-<link rel="canonical" href="https://nexia-code.github.io/guides/outil-metier-sans-developpeur/"><meta property="og:title" content="Créer un outil métier sans code : guide pas à pas | NEXIA"><meta property="og:description" content="À qui s&#x27;adresse ce guide. Aux dirigeants de TPE et PME, aux indépendants et aux responsables d&#x27;équipe qui gèrent une partie de leur activité dans des…">
+<title>Créer un outil métier sans code : guide pas à pas | NEXIA</title><meta name="description" content="À qui s&#x27;adresse ce guide. Aux dirigeants de TPE et PME, aux indépendants et aux responsables d&#x27;équipe qui suivent une partie de leur activité dans des…">
+<link rel="canonical" href="https://nexia-code.github.io/guides/outil-metier-sans-developpeur/"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%233B82F6%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-size=%2720%27 font-family=%27Arial%27 font-weight=%27700%27 fill=%27white%27 text-anchor=%27middle%27%3EN%3C/text%3E%3C/svg%3E"><meta property="og:type" content="website"><meta property="og:url" content="https://nexia-code.github.io/guides/outil-metier-sans-developpeur/"><meta property="og:site_name" content="NEXIA"><meta property="og:title" content="Créer un outil métier sans code : guide pas à pas | NEXIA"><meta property="og:description" content="À qui s&#x27;adresse ce guide. Aux dirigeants de TPE et PME, aux indépendants et aux responsables d&#x27;équipe qui suivent une partie de leur activité dans des…">
 <style>*{box-sizing:border-box}body{margin:0;font:17px/1.7 -apple-system,'Helvetica Neue',Arial,sans-serif;color:#1E293B;background:#F8FAFC}
 header{background:#0F172A;color:#fff;padding:18px 20px}header a{color:#fff;text-decoration:none;font-weight:700;letter-spacing:.3em}
 .chip{background:#3B82F6;border-radius:6px;padding:5px 12px}main{max-width:760px;margin:0 auto;padding:28px 18px 60px}
@@ -10,77 +10,247 @@ code{background:#F1F5F9;padding:1px 5px;border-radius:4px;font-size:.9em}pre{bac
 pre code{background:none;color:inherit}.cta{background:#0F172A;color:#fff;border-radius:14px;padding:22px;margin:2.5em 0}
 .cta a{display:inline-block;background:#3B82F6;color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;margin-top:8px}
 .carte{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:18px;margin:14px 0}.carte a{color:#1D4ED8;font-weight:700;text-decoration:none;font-size:1.1em}
-main{overflow-wrap:anywhere}pre,table{max-width:100%;overflow-x:auto}header{white-space:normal}
+main{overflow-wrap:break-word}pre{max-width:100%;overflow-x:auto}table{display:block;max-width:100%;overflow-x:auto;border-collapse:collapse}td,th{white-space:nowrap;padding:6px 10px;border-bottom:1px solid #E2E8F0}.cta a.sec{background:transparent;border:2px solid #fff}main a{color:#1D4ED8}.cta a{color:#fff}header{white-space:normal}
 footer{color:#64748B;font-size:.85em;text-align:center;padding:30px 18px}</style></head><body><header><a href="/"><span class="chip">N E X I A</span></a> &nbsp; l'IA pratique pour les petites entreprises</header>
-<main><h1>Créer un outil métier sans code : Construisez l&#x27;outil dont votre entreprise a besoin, sans développeur</h1><p><em>Extrait offert du guide NEXIA : présentation et niveau 1 en entier.</em></p><div class="cta"><b>Vous avez le niveau 1. La suite est dans le guide complet.</b><br>Niveaux 2 et 3 pas à pas, consignes IA prêtes à copier, glossaire, récapitulatif sur une page. PDF, 20 €.<br><a href="https://nexiapro.gumroad.com/l/outil-metier-sans-developpeur?utm_source=site&utm_medium=article">Obtenir le guide complet</a> &nbsp; <a href="https://nexiapro.gumroad.com/l/pack-guides-nexia?utm_source=site&utm_medium=article" style="background:#1E293B">Ou tous les guides en pack</a></div><h2>Avant de commencer</h2>
-<p><strong>À qui s'adresse ce guide.</strong> Aux dirigeants de TPE et PME, aux indépendants et aux responsables d'équipe qui gèrent une partie de leur activité dans des carnets, des fichiers Excel dispersés ou des post-it : le suivi des clients, les demandes entrantes, les dossiers en cours, le stock. Vous n'avez ni le budget ni le besoin d'un logiciel sur mesure développé par une agence. Vous avez besoin d'un outil simple, à vous, qui tient la route. Aucune compétence technique requise, aucune ligne de code.</p>
-<p><strong>Ce que vous aurez à la fin.</strong> Trois niveaux indépendants :</p>
+<main><h1>Construisez l&#x27;outil dont votre entreprise a besoin, sans développeur</h1><p><em>Extrait offert du guide NEXIA : présentation, premiers chapitres et niveau 1 en entier.</em></p><div class="cta"><b>Le niveau 1 de ce guide est offert ci-dessous.</b><br>Le guide complet (PDF) ajoute les niveaux suivants pas à pas, des consignes IA prêtes à copier, un glossaire et un récapitulatif.<br><a href="https://nexiapro.gumroad.com/l/outil-metier-sans-developpeur?utm_source=site&utm_medium=guide">Guide complet : 20 €*</a> &nbsp; <a class="sec" href="https://nexiapro.gumroad.com/l/pack-guides-nexia?utm_source=site&utm_medium=guide">Pack des 7 guides : 59 €* au lieu de 140 €</a><br><small>* TVA éventuelle selon votre pays ajoutée par Gumroad au paiement.</small></div><h2>Avant de commencer</h2>
+<p><strong>À qui s'adresse ce guide.</strong> Aux dirigeants de TPE et PME, aux indépendants et aux responsables d'équipe qui suivent une partie de leur activité dans des carnets, des fichiers Excel dispersés ou des post-it : les demandes de clients, les dossiers en cours, les interventions, un petit stock. Vous n'avez ni le budget ni le besoin d'un logiciel sur mesure. Vous avez besoin d'un outil simple, à vous, que l'équipe utilise vraiment. Aucune compétence technique n'est requise, aucune ligne de code.</p>
+<p><strong>Ce que vous aurez à la fin.</strong> Trois niveaux, à suivre dans l'ordre :</p>
 <ol>
-<li><strong>Niveau 1 (20 minutes de mise en place)</strong> : une base de données en ligne, gratuite, qui remplace vos fichiers Excel dispersés et vos carnets. Vos informations sont enfin à un seul endroit, accessibles depuis un ordinateur ou un téléphone.</li>
-<li><strong>Niveau 2 (30 minutes)</strong> : un formulaire de saisie relié à cette base, que vous, votre équipe ou vos clients peuvent remplir sans jamais ouvrir la base elle-même, plus des vues filtrées et une recherche pour retrouver une information en 5 secondes.</li>
-<li><strong>Niveau 3 (45 minutes)</strong> : les automatisations qui font le travail à votre place : une notification dès qu'une ligne importante est ajoutée, et l'IA qui lit chaque nouvelle entrée pour la classer ou la résumer avant que vous ne la voyiez.</li>
+<li><strong>Niveau 1 (30 minutes, gratuit)</strong> : une base de données en ligne qui remplace vos fichiers dispersés, avec des colonnes adaptées à votre activité et une vue « À traiter » que vous ouvrez chaque matin.</li>
+<li><strong>Niveau 2 (20 minutes, gratuit)</strong> : un formulaire que vos clients ou votre équipe remplissent sans jamais ouvrir la base. Chaque envoi crée une ligne et vous prévient par email. Vous retrouvez n'importe quelle fiche en quelques secondes.</li>
+<li><strong>Niveau 3 (60 minutes)</strong> : quatre fois par jour, l'IA lit les nouvelles demandes, leur attribue une priorité et écrit un résumé d'une phrase dans la base. Vous gardez la décision.</li>
 </ol>
-<p><strong>Combien de temps vous pouvez en attendre.</strong> À titre d'estimation, sur un scénario type : les recherches d'information dispersées dans plusieurs fichiers (10 à 20 minutes par recherche selon les retours courants) ramenées à quelques secondes, et le tri manuel des demandes entrantes (souvent 15 à 30 minutes par jour) largement automatisé. Ce sont des estimations : votre gain dépend de votre situation de départ et du soin apporté à la mise en place.</p>
+<p><strong>Combien de temps vous pouvez en attendre.</strong> À titre d'estimation, sur le scénario type décrit plus bas (une centaine de demandes par mois) : retrouver une information passe de plusieurs minutes de recherche dans des fichiers et des carnets à quelques secondes, et le tri des demandes du jour se fait en lisant une vue déjà classée. Ce n'est pas une mesure : votre gain dépend de votre situation de départ et de la discipline de saisie de l'équipe.</p>
+<p><em>Estimation sur un scénario type (une centaine de demandes par mois), pas une mesure :</em></p>
+<table>
+<thead>
+<tr>
+<th>Tâche</th>
+<th>Avant</th>
+<th>Avec le guide</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Retrouver la fiche d'un client</td>
+<td>plusieurs minutes entre carnet, Excel et SMS</td>
+<td>quelques secondes avec la recherche</td>
+</tr>
+<tr>
+<td>Savoir ce qui reste à faire</td>
+<td>relire le carnet, demander à l'équipe</td>
+<td>ouvrir la vue « À traiter »</td>
+</tr>
+<tr>
+<td>Recevoir une demande de client</td>
+<td>appel ou SMS noté à la main, parfois perdu</td>
+<td>formulaire, ligne créée, email de prévenance</td>
+</tr>
+<tr>
+<td>Trier les demandes du jour</td>
+<td>lire chaque message en entier</td>
+<td>lire la priorité et le résumé proposés par l'IA</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Le scénario type suivi dans ce guide.</strong> Karim (personnage fictif) dirige une petite entreprise de plomberie et de chauffage de quatre personnes. Les demandes arrivent par téléphone, par SMS et par email, et finissent dans un carnet ou dans la mémoire de chacun. Une fuite urgente se perd parfois entre deux devis. À chaque niveau, vous verrez ce que Karim construit, de sa première base jusqu'au tri automatique de ses demandes.</p>
 <p><strong>Ce dont vous avez besoin.</strong></p>
 <ul>
-<li>Un ordinateur et une adresse email</li>
-<li>Budget : 0 € pour démarrer (tous les outils de ce guide ont un plan gratuit qui suffit à une PME) ; comptez 10 à 20 € par mois si votre volume grandit (détaillé au fil du guide)</li>
-<li>Vos informations actuelles, même en désordre : fichiers Excel, carnet, mémoire de l'équipe</li>
+<li>Un ordinateur, Mac ou PC, avec un navigateur récent (Chrome, Edge, Firefox ou Safari).</li>
+<li>Une adresse email. Pour le niveau 3 du guide complet, une adresse Gmail est la plus simple, mais elle n'est pas obligatoire.</li>
+<li>Vos informations actuelles, même en désordre : fichiers Excel, carnet, liste de clients.</li>
+<li>Pour le niveau 3 du guide complet seulement : un moyen de paiement pour acheter un petit crédit d'utilisation de Claude.</li>
 </ul>
-<p><strong>Ce que ce guide n'est pas.</strong> Un vrai logiciel métier complexe (gestion de production industrielle, comptabilité réglementée, dossier médical) dépasse le cadre du no-code et mérite un développeur ou un logiciel spécialisé. Ce guide construit l'outil du quotidien : suivre des clients, des dossiers, des demandes, un stock simple. Le chapitre 5 vous aide justement à faire la différence avant de vous lancer.</p>
-<p><strong>Comment lire ce guide.</strong> Manipulations numérotées, points de contrôle « Vous devez voir », encadrés « Si ça ne marche pas », glossaire final. Chaque niveau est autonome : commencez par celui qui répond à votre besoin le plus pressant.</p>
-<hr />
-<h2>Chapitre 1. Comprendre en 3 minutes</h2>
-<h2>1.1 Un outil métier, ce n'est que trois briques</h2>
-<p>Sous le mot « logiciel » ou « application », il n'y a en réalité que trois briques qui s'assemblent :</p>
+<p><strong>Ce que cela coûte.</strong> Les niveaux 1 et 2 se font avec l'offre gratuite d'Airtable (1 000 lignes par base, 5 personnes en modification). Le niveau 3 du guide complet utilise l'offre gratuite de Make (1 000 crédits par mois, deux scénarios actifs au plus) et l'API de Claude, payée d'avance à l'usage : sur le scénario type, nous estimons cette dépense à moins de 20 centimes de dollar par mois (calcul au chapitre 4 du guide complet). Prix et limites vérifiés le 2 octobre 2026, susceptibles de changer.</p>
+<p><strong>Ce que ce guide n'est pas.</strong> Un logiciel métier complet. La gestion de production, une comptabilité réglementée ou un dossier médical dépassent le cadre de ce guide et méritent un logiciel spécialisé ou un développeur. Ce guide construit l'outil du quotidien : suivre des demandes, des clients, des dossiers, un stock simple. La consigne 4 du chapitre 5 du guide complet vous aide à faire la différence.</p>
+<p><strong>Comment lire ce guide.</strong> Chaque manipulation est numérotée, avec le nom exact du bouton en gras. Après chaque étape importante, un encadré « Vous devez voir » vous confirme que vous êtes au bon endroit, et un encadré « Si ça ne marche pas » vous dépanne. Les consignes à donner à l'IA sont présentées dans des cadres « à copier » : remplacez ce qui est entre crochets et en majuscules. Les mots techniques sont expliqués à leur première apparition et repris dans le glossaire. Vous pouvez vous arrêter à la fin de n'importe quel niveau : chacun fonctionne seul.</p>
+<h2>Chapitre 1. Comprendre en 5 minutes</h2>
+<h3>1.1 Un outil métier, ce sont trois briques</h3>
+<p>Derrière le mot « logiciel », il y a presque toujours trois briques :</p>
 <ul>
-<li><strong>Une base de données</strong> : l'endroit où vivent vos informations, structurées en lignes et colonnes (un client par ligne, ses coordonnées et son statut en colonnes). C'est le cœur de l'outil.</li>
-<li><strong>Une interface de saisie et de consultation</strong> : la façon dont vous et votre équipe ajoutez, cherchez et modifiez ces informations, sans avoir à écrire dans la base directement.</li>
-<li><strong>Des automatisations</strong> : ce qui se déclenche tout seul quand une information change (une notification, un email, un classement fait par l'IA).</li>
+<li><strong>Une base de données</strong> : l'endroit où vivent vos informations, rangées en lignes et en colonnes. Une demande par ligne ; le nom du client, son téléphone et le statut de la demande en colonnes. C'est le cœur de l'outil.</li>
+<li><strong>Une façon de saisir et de consulter</strong> : un formulaire pour ajouter une ligne, des vues pour ne voir que ce qui compte, une recherche pour retrouver une fiche.</li>
+<li><strong>Des automatisations</strong> : ce qui se déclenche tout seul quand une information arrive. Une automatisation est une consigne donnée une seule fois à un ordinateur, qu'il exécute ensuite sans vous.</li>
 </ul>
-<p>Une agence de développement facturerait plusieurs milliers d'euros pour coder ces trois briques sur mesure. Les outils no-code de ce guide font la même chose par assemblage, sans écrire de code, pour la quasi-totalité des besoins d'une PME.</p>
-<h2>1.2 Les outils du guide</h2>
-<p><strong>Airtable</strong> : une base de données qui se présente comme un tableur, mais qui sait faire ce qu'un tableur ne sait pas : formulaires liés, vues filtrées, pièces jointes, liens entre tables. Plan gratuit largement suffisant pour démarrer (limite constatée en juillet 2026 : 1 000 lignes par base, très au-delà des besoins de ce guide).</p>
-<p><strong>Make</strong> : le chef d'orchestre qui relie vos outils et exécute les automatisations chaque fois que nécessaire, sans intervention humaine. Plan gratuit suffisant pour ce guide.</p>
-<p><strong>Claude</strong> : l'IA qui lit chaque nouvelle entrée pour la résumer ou la classer, utilisée via son API (une « prise » pour logiciels, quelques euros de crédit pour plusieurs mois d'usage).</p>
-<h2>1.3 L'avertissement honnête du guide</h2>
-<p>Un outil de suivi ne vaut que par la discipline de saisie qu'on lui applique. Si les informations ne sont saisies nulle part, aucune base de données ne les fera apparaître. La bonne nouvelle : ce guide construit justement un formulaire de saisie plus rapide qu'un tableur classique, précisément pour réduire cette friction.</p>
-<p>Deuxième avertissement : vos données (clients, dossiers) transiteront par Airtable et, si vous activez le niveau 3, par Make et l'API Anthropic. Pour une base de données strictement interne, sans donnée sensible au sens RGPD (santé, données bancaires complètes), c'est un choix raisonnable et largement répandu. Si vos données sont sensibles, limitez-vous au niveau 1 et 2, ou consultez un professionnel avant d'automatiser leur circulation.</p>
-<hr />
-<h2>Chapitre 2. Niveau 1 : votre base de données prête en 20 minutes</h2>
-<h2>2.1 Créer votre première base</h2>
+<p>Ce guide assemble ces trois briques avec des outils en ligne déjà prêts. On parle de « no-code » : construire un outil en assemblant des briques visuelles, sans écrire de programme.</p>
+<h3>1.2 Les outils du guide</h3>
+<p><strong>Airtable</strong> : une base de données qui ressemble à un tableur, mais qui sait faire ce qu'un tableur ne fait pas bien : formulaires reliés à la base, vues filtrées, pièces jointes, application sur téléphone. Niveaux 1 et 2.</p>
+<p><strong>Make</strong> : un service qui relie vos outils entre eux et exécute vos automatisations à l'heure prévue. Niveau 3.</p>
+<p><strong>Claude</strong> : l'IA d'Anthropic. Au niveau 3 du guide complet, Make lui envoie chaque nouvelle demande, et Claude renvoie une priorité et un résumé. Make passe par l'API de Claude, c'est-à-dire la porte d'entrée prévue pour les logiciels, payée à l'usage. Au chapitre 5 du guide complet, vous utiliserez aussi Claude en conversation, avec son offre gratuite sur claude.ai.</p>
+<p><strong>La langue des menus.</strong> Airtable peut s'afficher en anglais, en français, en allemand ou en espagnol. Ce guide donne les noms des boutons en anglais, tels qu'ils figurent dans la documentation officielle. Le plus simple est de construire votre outil avec l'interface en anglais, puis de passer en français si vous le souhaitez : cliquez sur l'icône de votre compte en haut à droite, puis sur <strong>Language preferences</strong>. Vos propres noms de colonnes et de vues ne changent pas. Les menus de Make sont, eux aussi, cités en anglais.</p>
+<h3>1.3 Le schéma d'ensemble</h3>
+<p>À la fin du guide, l'outil de Karim fonctionne ainsi :</p>
 <ol>
-<li>Allez sur <strong>airtable.com</strong> et créez un compte gratuit</li>
-<li>Cliquez sur « Créer une base », puis choisissez de partir d'une base vide (les modèles proposés sont utiles à regarder plus tard, mais partir de zéro évite d'hériter de colonnes inutiles)</li>
-<li>Renommez la base avec le nom de votre activité, par exemple « Suivi clients [votre entreprise] »</li>
-<li>Renommez la première table selon ce que vous suivez : « Clients », « Dossiers », « Demandes » ou « Stock » selon votre besoin principal</li>
+<li>Un client remplit le formulaire de demande (niveau 2 du guide complet). Une ligne apparaît dans la base, au statut « Nouvelle », et Karim reçoit un email.</li>
+<li>Quatre fois par jour, Make repère les nouvelles lignes, envoie le texte de chaque demande à Claude et écrit sa réponse dans deux colonnes : « Priorité IA » et « Résumé IA » (niveau 3 du guide complet).</li>
+<li>Karim ouvre la vue « Urgences », puis « À traiter », lit les priorités et les résumés, et décide.</li>
 </ol>
+<p>L'IA propose, vous décidez. Rien n'est envoyé au client sans vous.</p>
+<h3>1.4 Vos données de clients sont des données personnelles</h3>
+<p>Un nom, un téléphone, une adresse de client sont des données personnelles au sens du RGPD. Trois points à garder en tête dès maintenant, sans prétendre vous rendre conforme :</p>
+<ul>
+<li><strong>Où vont les données.</strong> Par défaut, Airtable stocke les données sur des serveurs situés aux États-Unis ; le choix d'une autre région est réservé à son offre Enterprise Scale. Au niveau 3 du guide complet, le texte des demandes passe aussi par Make (sa politique de confidentialité indique que les données de résidents européens peuvent être transférées hors de l'Espace économique européen) et par l'API d'Anthropic (données stockées aux États-Unis, selon sa page d'aide).</li>
+<li><strong>La minimisation.</strong> Ne créez que les colonnes dont vous avez besoin. Au niveau 3 du guide complet, n'envoyez à Claude que le texte de la demande, jamais le nom, le téléphone ou l'adresse du client : le guide est construit ainsi.</li>
+<li><strong>L'information des personnes.</strong> La CNIL rappelle que les personnes doivent être informées au moment où leurs données sont recueillies, par exemple sur un formulaire : qui collecte, pourquoi, qui reçoit les données (y compris les prestataires), combien de temps elles sont gardées, quels droits elles ont, et l'existence d'un transfert hors Union européenne. La consigne 3 du chapitre 5 du guide complet vous aide à rédiger un premier texte, à faire vérifier.</li>
+</ul>
 <blockquote>
-<p><strong>Vous devez voir</strong> : une grille vide avec quelques colonnes par défaut (Nom, Notes, Pièces jointes), prête à être adaptée.</p>
+<p><strong>Attention</strong> : n'utilisez pas ce montage pour des données de santé, des données bancaires complètes ou des informations sur vos salariés. Pour ces données, demandez conseil à un professionnel avant de construire quoi que ce soit.</p>
 </blockquote>
-<h2>2.2 Construire vos colonnes</h2>
-<p>La qualité de votre outil se joue entièrement ici : des colonnes bien choisies valent mieux qu'une base compliquée.</p>
+<h2>Chapitre 2. Niveau 1 : votre base de données en 30 minutes (gratuit)</h2>
+<p>À la fin de ce chapitre, vos demandes (ou vos clients, vos dossiers) vivent à un seul endroit, avec une vue « À traiter » qui ne montre que ce qui reste à faire.</p>
+<h3>2.1 Créer votre compte et votre base</h3>
 <ol>
-<li>Listez sur papier les 5 à 8 informations que vous voulez suivre pour chaque ligne (par exemple pour un suivi clients : nom, téléphone, email, statut, date du dernier contact, valeur du dossier, notes)</li>
-<li>Pour chaque information, ajoutez une colonne dans Airtable en choisissant le bon type :</li>
-<li><strong>Texte</strong> pour les noms, notes libres</li>
-<li><strong>Sélection unique</strong> pour un statut (« Nouveau », « En cours », « Terminé », « Perdu ») : Airtable affiche alors des étiquettes de couleur, bien plus lisibles qu'un texte libre</li>
-<li><strong>Date</strong> pour toute échéance ou dernier contact</li>
-<li><strong>Nombre</strong> pour une valeur, une quantité</li>
-<li><strong>Pièce jointe</strong> si vous devez rattacher un document (devis, photo)</li>
-<li>Renseignez 3 ou 4 lignes réelles pour tester que les colonnes correspondent bien à votre réalité</li>
+<li>Allez sur <strong>airtable.com</strong> et créez un compte gratuit.</li>
+<li>Sur la page d'accueil, cliquez sur <strong>+ Create</strong>.</li>
+<li>Choisissez votre espace de travail (il n'y en a qu'un au début).</li>
+<li>Choisissez <strong>Build an app on your own</strong> pour partir d'une base vide. Les autres options (création assistée par l'IA d'Airtable, modèles) pourront servir plus tard ; partir de zéro évite d'hériter de colonnes inutiles.</li>
+<li>Donnez un nom à la base, par exemple « Suivi [NOM DE VOTRE ENTREPRISE] ».</li>
+<li>Renommez la première table selon ce que vous suivez : « Demandes », « Clients », « Dossiers » ou « Stock ». Une table est un onglet de la base : une sorte de feuille de tableur.</li>
 </ol>
 <blockquote>
-<p><strong>Vous devez voir</strong> : un tableau avec vos vraies catégories de statut en étiquettes colorées, et vos premières lignes de test remplies.</p>
-<p><strong>Si ça ne marche pas</strong> : si vous hésitez entre deux types de colonne, choisissez toujours le plus simple (texte plutôt que formule complexe) pour ce premier jet. Vous pourrez raffiner une fois l'outil adopté par l'équipe ; un outil trop sophistiqué dès le premier jour est souvent celui qui n'est jamais utilisé.</p>
+<p><strong>Vous devez voir</strong> une grille presque vide, avec quelques colonnes par défaut, et le nom de votre table en haut.</p>
 </blockquote>
-<h2>2.3 Les vues, pour ne jamais se noyer dans les lignes</h2>
-<p>Une vue est une façon différente de regarder la même table, sans dupliquer les données.</p>
+<h3>2.2 Choisir vos colonnes sur papier d'abord</h3>
+<p>La qualité de votre outil se joue ici. Des colonnes bien choisies valent mieux qu'une base compliquée.</p>
 <ol>
-<li>Créez une vue « À traiter » filtrée sur le statut « Nouveau » ou « En cours » : c'est celle que vous ouvrez chaque matin</li>
-<li>Créez une vue « Cette semaine » filtrée sur la date de dernier contact ou d'échéance</li>
-<li>Groupez éventuellement une vue par statut pour voir en un coup d'œil la répartition de votre activité</li>
+<li>Notez sur papier les 6 à 8 informations que vous voulez suivre pour chaque ligne. Une bonne colonne sert une décision ou une action ; si personne ne la lira jamais, supprimez-la.</li>
+<li>Pour chaque information, notez le type qui lui convient (tableau ci-dessous).</li>
+<li>Si vous hésitez, utilisez la consigne 1 du chapitre 5 : Claude vous propose une liste de colonnes adaptée à votre activité.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Ce que vous voulez noter</th>
+<th>Type de colonne Airtable</th>
+<th>Pourquoi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Un nom, une adresse, un téléphone</td>
+<td><strong>Single line text</strong></td>
+<td>Une ligne de texte libre</td>
+</tr>
+<tr>
+<td>Une description, des remarques</td>
+<td><strong>Long text</strong></td>
+<td>Plusieurs lignes possibles</td>
+</tr>
+<tr>
+<td>Un statut (Nouvelle, Planifiée, Faite)</td>
+<td><strong>Single select</strong></td>
+<td>Des étiquettes de couleur, faciles à filtrer</td>
+</tr>
+<tr>
+<td>Une date d'intervention ou d'échéance</td>
+<td><strong>Date &amp; Time</strong></td>
+<td>Un calendrier pour choisir la date</td>
+</tr>
+<tr>
+<td>Un montant</td>
+<td><strong>Currency</strong></td>
+<td>Le nombre s'affiche comme un prix</td>
+</tr>
+<tr>
+<td>Une adresse email</td>
+<td><strong>Email</strong></td>
+<td>L'adresse devient cliquable</td>
+</tr>
+<tr>
+<td>Une photo, un devis en PDF</td>
+<td><strong>Attachment</strong></td>
+<td>Le fichier est rangé avec la ligne</td>
+</tr>
+<tr>
+<td>La date de création de la ligne</td>
+<td><strong>Created time</strong></td>
+<td>Remplie toute seule par Airtable</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Astuce</strong> : pour un numéro de téléphone français, préférez <strong>Single line text</strong> au type <strong>Phone number</strong>. Selon la documentation d'Airtable, ce type met en forme les numéros à 10 chiffres à la façon des États-Unis et du Canada, ce qui rend un 06 illisible.</p>
+</blockquote>
+<h3>2.3 Créer vos colonnes dans Airtable</h3>
+<ol>
+<li>Supprimez ou renommez les colonnes par défaut qui ne vous servent pas : cliquez sur l'en-tête de la colonne pour ouvrir son menu.</li>
+<li>Cliquez sur le <strong>+</strong> à droite de la dernière colonne.</li>
+<li>Choisissez le type de colonne.</li>
+<li>Donnez-lui son nom.</li>
+<li>Cliquez sur <strong>Create field</strong>.</li>
+<li>Recommencez pour chaque colonne de votre liste.</li>
+<li>Pour la colonne de statut (<strong>Single select</strong>), saisissez vos options dans l'ordre du travail : par exemple « Nouvelle », « Planifiée », « Faite », « Facturée », « Annulée ».</li>
+<li>Ajoutez dès maintenant une colonne <strong>Created time</strong> nommée « Créée le ». Elle se remplit seule et le niveau 3 du guide complet en a besoin.</li>
+<li>Saisissez 3 ou 4 lignes réelles pour vérifier que vos colonnes collent à votre activité.</li>
 </ol>
 <blockquote>
-<p><strong>Vous devez voir</strong> : en changeant de vue dans le menu de gauche, la même table s'affiche filtrée différemment sans jamais perdre de données.</p>
-</blockquote><div class="cta"><b>Vous avez le niveau 1. La suite est dans le guide complet.</b><br>Niveaux 2 et 3 pas à pas, consignes IA prêtes à copier, glossaire, récapitulatif sur une page. PDF, 20 €.<br><a href="https://nexiapro.gumroad.com/l/outil-metier-sans-developpeur?utm_source=site&utm_medium=article">Obtenir le guide complet</a> &nbsp; <a href="https://nexiapro.gumroad.com/l/pack-guides-nexia?utm_source=site&utm_medium=article" style="background:#1E293B">Ou tous les guides en pack</a></div></main><footer>NEXIA, guides pratiques pour TPE, PME et indépendants. Les gains de temps indiqués sont des estimations sur des scénarios types.</footer></body></html>
+<p><strong>Vous devez voir</strong> vos colonnes avec leurs noms, le statut affiché en étiquettes de couleur et la colonne « Créée le » remplie automatiquement sur vos lignes de test.</p>
+<p><strong>Si ça ne marche pas</strong> : si vous hésitez entre deux types, prenez le plus simple (du texte plutôt qu'une formule). Un outil trop sophistiqué dès le premier jour est souvent celui que l'équipe abandonne. Vous pourrez toujours changer le type d'une colonne plus tard depuis son menu.</p>
+</blockquote>
+<h3>2.4 Les vues, pour ne pas se noyer dans les lignes</h3>
+<p>Une vue est une façon de regarder la même table, filtrée ou triée, sans copier les données. Modifier une ligne dans une vue la modifie partout.</p>
+<ol>
+<li>Dans la barre latérale des vues (à gauche de la grille), section <strong>Create</strong>, choisissez <strong>Grid</strong> pour créer une nouvelle vue en grille.</li>
+<li>Nommez-la « À traiter ».</li>
+<li>Cliquez sur <strong>Filter</strong> dans la barre au-dessus de la grille et ajoutez une seule condition : le statut n'est aucun des statuts terminés (« Faite », « Facturée », « Annulée »). Les lignes encore sans statut, comme celles qui arriveront par le formulaire, restent ainsi visibles.</li>
+<li>Créez une deuxième vue « Cette semaine », filtrée sur la date d'intervention.</li>
+<li>Si vous voulez voir la répartition de votre activité, créez une troisième vue groupée par statut avec le bouton <strong>Group</strong>.</li>
+</ol>
+<blockquote>
+<p><strong>Vous devez voir</strong>, en passant d'une vue à l'autre dans la barre latérale, la même table filtrée différemment. Les lignes masquées par un filtre ne sont pas supprimées.</p>
+<p><strong>Si ça ne marche pas</strong> : une ligne « disparaît » ? Elle ne correspond plus au filtre de la vue ouverte (son statut a changé, par exemple). Revenez à la première vue, qui montre tout.</p>
+</blockquote>
+<h3>2.5 Le scénario type : la base de Karim</h3>
+<p>Karim crée la base « Suivi Karim Plomberie » et la table « Demandes ». Ses colonnes :</p>
+<table>
+<thead>
+<tr>
+<th>Colonne</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Client</td>
+<td>Single line text (première colonne)</td>
+</tr>
+<tr>
+<td>Téléphone</td>
+<td>Single line text</td>
+</tr>
+<tr>
+<td>Email</td>
+<td>Email</td>
+</tr>
+<tr>
+<td>Adresse d'intervention</td>
+<td>Single line text</td>
+</tr>
+<tr>
+<td>Demande</td>
+<td>Long text</td>
+</tr>
+<tr>
+<td>Statut</td>
+<td>Single select : Nouvelle, Planifiée, Faite, Facturée, Annulée</td>
+</tr>
+<tr>
+<td>Date d'intervention</td>
+<td>Date &amp; Time</td>
+</tr>
+<tr>
+<td>Montant du devis</td>
+<td>Currency</td>
+</tr>
+<tr>
+<td>Photos</td>
+<td>Attachment</td>
+</tr>
+<tr>
+<td>Créée le</td>
+<td>Created time</td>
+</tr>
+</tbody>
+</table>
+<p>Il recopie les douze demandes en cours de son carnet. Sa vue « À traiter » en montre sept. Le lendemain matin, son associé ouvre la même vue sur son téléphone, dans l'application Airtable, au lieu de l'appeler pour savoir où aller.</p>
+<p><strong>Ce que cela change pour Karim, en résumé.</strong> Une seule liste à jour, partagée par les quatre personnes de l'équipe, au lieu d'un carnet qui reste dans la camionnette.</p><p><em>Ce contenu est rédigé par des outils d&#x27;intelligence artificielle (Claude, d&#x27;Anthropic). Les règles et chiffres cités sont vérifiés automatiquement sur les sources officielles indiquées, sans relecture humaine systématique. Publication sous la responsabilité de Romain Dalon Bourbon EI. Information générale, pas un conseil juridique.</em></p><div class="cta"><b>Vous avez le niveau 1. La suite est dans le guide complet.</b><br>Niveaux suivants pas à pas, consignes IA prêtes à copier, glossaire, récapitulatif sur une page. PDF, 20 €*.<br><a href="https://nexiapro.gumroad.com/l/outil-metier-sans-developpeur?utm_source=site&utm_medium=guide">Guide complet : 20 €*</a> &nbsp; <a class="sec" href="https://nexiapro.gumroad.com/l/pack-guides-nexia?utm_source=site&utm_medium=guide">Pack des 7 guides : 59 €* au lieu de 140 €</a><br><small>* TVA éventuelle selon votre pays ajoutée par Gumroad au paiement.</small></div></main><footer>NEXIA, Romain Dalon Bourbon EI. Guides pratiques pour TPE, PME et indépendants, rédigés avec l'IA. Les gains de temps indiqués sont des estimations sur des scénarios types.<br><a href="/mentions-legales/">Mentions légales</a> · <a href="/confidentialite/">Confidentialité</a></footer></body></html>
