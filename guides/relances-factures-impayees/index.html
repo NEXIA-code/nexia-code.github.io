@@ -17,7 +17,7 @@ footer{color:#64748B;font-size:.85em;text-align:center;padding:30px 18px}</style
 <p><strong>Ce que vous aurez à la fin.</strong> Trois niveaux, à suivre dans l'ordre :</p>
 <ol>
 <li><strong>Niveau 1 (20 minutes, gratuit)</strong> : un tableau Google Sheets de toutes vos factures en attente, qui calcule seul le nombre de jours de retard et vous dit quelle relance envoyer aujourd'hui.</li>
-<li><strong>Niveau 2 (45 minutes, gratuit)</strong> : chaque matin, Make prépare dans Gmail les relances du jour (rappel courtois à 7 jours de retard, relance ferme à 15 jours, dernier rappel amiable à 30 jours), à partir de trois modèles écrits une fois avec l'aide de Claude. Vous relisez et vous envoyez.</li>
+<li><strong>Niveau 2 (45 minutes, gratuit)</strong> : chaque matin du lundi au vendredi, Make prépare dans Gmail les relances du jour (rappel courtois à 7 jours de retard, relance ferme à 15 jours, dernier rappel amiable à 30 jours), à partir de trois modèles écrits une fois avec l'aide de Claude. Vous relisez et vous envoyez.</li>
 <li><strong>Niveau 3 (30 minutes, gratuit)</strong> : un tableau de bord de vos impayés, un historique semaine par semaine et, chaque lundi matin, une alerte par email si le total en retard dépasse le seuil que vous avez choisi.</li>
 </ol>
 <p><strong>Combien de temps vous pouvez en attendre.</strong> Sur le scénario type décrit plus bas, nous estimons que repérer les retards et rédiger les relances à la main prend 10 à 20 minutes par facture concernée, sans compter les relances oubliées. Avec le guide, il reste à relire et envoyer des brouillons déjà prêts, soit une à deux minutes par relance. Ce n'est pas une mesure : votre gain dépend de votre volume de factures et du nombre de retards.</p>
@@ -62,7 +62,7 @@ footer{color:#64748B;font-size:.85em;text-align:center;padding:30px 18px}</style
 </ul>
 <p><strong>Ce que cela coûte.</strong> Les trois niveaux tiennent dans les offres gratuites : Google Sheets et Gmail avec un compte Google, Make avec son offre gratuite (1 000 crédits par mois, deux scénarios actifs au plus, un passage toutes les 15 minutes au plus souvent), Claude avec son offre gratuite sur claude.ai. Sur le scénario type, nous estimons la consommation à une centaine de crédits Make par mois (calcul au chapitre 4 du guide complet). Offres vérifiées le 2 octobre 2026, susceptibles de changer.</p>
 <p><strong>Ce que ce guide n'est pas.</strong> Un service de recouvrement, ni un conseil juridique. Les relances de ce guide restent amiables. Un email ne remplace pas une mise en demeure en bonne et due forme (section 1.3). Au-delà du dernier rappel amiable, la suite se décide avec votre expert-comptable, un avocat ou un commissaire de justice.</p>
-<p><strong>Comment lire ce guide.</strong> Chaque manipulation est numérotée, avec le nom exact du bouton ou du menu en gras. Après chaque étape importante, un encadré « Vous devez voir » vous confirme que vous êtes au bon endroit, et un encadré « Si ça ne marche pas » vous dépanne. Les modèles d'email et les consignes à donner à l'IA sont présentés dans des cadres « à copier » : remplacez ce qui est entre crochets et en majuscules. Les mots techniques sont expliqués à leur première apparition et repris dans le glossaire. Vous pouvez vous arrêter à la fin de n'importe quel niveau : chacun fonctionne seul.</p>
+<p><strong>Comment lire ce guide.</strong> Chaque manipulation est numérotée, avec le nom exact du bouton ou du menu en gras. Après chaque étape importante, un encadré « Vous devez voir » vous confirme que vous êtes au bon endroit, et un encadré « Si ça ne marche pas » vous dépanne. Les modèles d'email et les consignes à donner à l'IA sont présentés dans des cadres « à copier » : remplacez ce qui est entre crochets et en majuscules. Toutes les formules, les trois modèles et les cinq consignes sont aussi fournis dans le fichier texte « formules-et-modeles.txt », téléchargé avec ce guide : copiez de préférence depuis ce fichier, car certains lecteurs PDF modifient le texte copié (caractères dans le désordre, retours à la ligne ajoutés). Les mots techniques sont expliqués à leur première apparition et repris dans le glossaire. Vous pouvez vous arrêter à la fin de n'importe quel niveau : chacun fonctionne seul.</p>
 <h2>Chapitre 1. Comprendre en 5 minutes</h2>
 <h3>1.1 Pourquoi la relance manuelle échoue</h3>
 <p>Trois causes reviennent :</p>
@@ -87,16 +87,16 @@ footer{color:#64748B;font-size:.85em;text-align:center;padding:30px 18px}</style
 <li><strong>Délai de paiement.</strong> Sauf accord différent, 30 jours après la réception de la marchandise ou la fin de la prestation. Si un délai est convenu au contrat, il ne peut pas dépasser 60 jours après la date d'émission de la facture, ou 45 jours fin de mois s'il est mentionné au contrat. Certains secteurs ont des règles particulières. Source : entreprendre.service-public.gouv.fr/vosdroits/F23211 (fiche vérifiée par l'administration le 7 août 2026).</li>
 <li><strong>Pénalités de retard.</strong> Elles sont dues dès le lendemain de la date de paiement inscrite sur la facture, sans qu'un rappel soit nécessaire. Leur taux ne peut pas être inférieur à 3 fois le taux de l'intérêt légal ; à défaut de taux prévu, c'est le taux de refinancement de la Banque centrale européenne majoré de 10 points, soit 12,40 % pour le second semestre 2026 selon la même fiche F23211.</li>
 <li><strong>Indemnité forfaitaire pour frais de recouvrement.</strong> 40 € par facture payée en retard, due une seule fois par facture (article D441-5 du Code de commerce, fiche F23211).</li>
-<li><strong>Ce que la facture doit indiquer.</strong> L'article L441-9 du Code de commerce, dans sa version en vigueur jusqu'au 1er janvier 2027, impose que la facture précise notamment le taux des pénalités de retard et le montant de l'indemnité forfaitaire pour frais de recouvrement (legifrance.gouv.fr, article L441-9 ; fiche entreprendre.service-public.gouv.fr/vosdroits/F31808, vérifiée par l'administration le 11 août 2026). Si vos factures ne portent pas ces mentions, la consigne 5 du chapitre 5 du guide complet vous aide à préparer la question pour votre comptable.</li>
+<li><strong>Ce que la facture doit indiquer.</strong> L'article L441-9 du Code de commerce, dans sa version en vigueur jusqu'au 1er janvier 2027, impose que la facture précise notamment le taux des pénalités de retard et le montant de l'indemnité forfaitaire pour frais de recouvrement (legifrance.gouv.fr, article L441-9 ; fiche entreprendre.service-public.gouv.fr/vosdroits/F31808, vérifiée par l'administration le 11 août 2026). Si vos factures ne portent pas ces mentions, la consigne 5 du chapitre 5 du guide complet vous aide à préparer la question pour votre comptable. Les articles L441-9 et L441-10 du Code de commerce sont réécrits au 1er janvier 2027 (ordonnance n° 2026-671 du 27 juillet 2026) ; les règles résumées ici restent les mêmes dans la nouvelle rédaction, lue sur Légifrance le 2 octobre 2026.</li>
 </ul>
-<p><strong>Avec des particuliers.</strong> Les pénalités de retard du Code de commerce et l'indemnité de 40 € ne concernent que les clients professionnels (fiche F31808). Ne les mentionnez pas dans une relance adressée à un particulier : supprimez alors le deuxième paragraphe du modèle 3 (encadré Attention, section 3.3).</p>
+<p><strong>Avec des particuliers.</strong> L'indemnité forfaitaire de 40 € ne peut être réclamée qu'à un client professionnel (fiche F31808, vérifiée par l'administration le 11 août 2026). Les pénalités de retard du Code de commerce (taux de la BCE majoré de 10 points) visent un professionnel en retard de paiement (article L441-10, version en vigueur jusqu'au 1er janvier 2027). Envers un particulier, les intérêts de retard suivent d'autres règles, celles du Code civil et du taux de l'intérêt légal (service-public.gouv.fr/particuliers/vosdroits/F783, vérifiée par l'administration le 1er juillet 2026). Par prudence, ne mentionnez ni pénalités ni indemnité dans une relance adressée à un particulier : supprimez le deuxième paragraphe du modèle 3 (encadré Attention, section 3.3), et posez la question à votre comptable si vous voulez en réclamer.</p>
 <p><strong>Relance, mise en demeure, recouvrement : trois choses différentes.</strong></p>
 <ol>
 <li><strong>La relance</strong> n'est pas obligatoire mais presque toujours utilisée : un rappel par téléphone ou par écrit, efficace en cas d'oubli ou de difficulté passagère. C'est l'objet de ce guide.</li>
 <li><strong>La mise en demeure</strong> est une demande formelle de payer. Selon la fiche officielle sur le recouvrement amiable, elle prend la forme d'une sommation faite par un commissaire de justice, d'une lettre recommandée avec avis de réception qui exprime clairement la demande, ou découle du contrat s'il le prévoit (entreprendre.service-public.gouv.fr/vosdroits/F38586, vérifiée par l'administration le 27 novembre 2024). La fiche ne cite pas l'email simple parmi ces formes : le dernier rappel de ce guide n'est donc pas présenté comme une mise en demeure.</li>
-<li><strong>Le recouvrement</strong> vient ensuite : procédure simplifiée confiée à un commissaire de justice pour une créance de 5 000 € au plus, intérêts compris (service-public.gouv.fr/particuliers/vosdroits/F1746, vérifiée le 1er septembre 2026), ou injonction de payer devant le tribunal (entreprendre.service-public.gouv.fr/vosdroits/F38156). Ces démarches dépassent ce guide.</li>
+<li><strong>Le recouvrement</strong> vient ensuite : procédure simplifiée confiée à un commissaire de justice pour une créance de 5 000 € au plus, intérêts compris, qui suppose l'accord du client (service-public.gouv.fr/particuliers/vosdroits/F1746, vérifiée le 1er septembre 2026), ou injonction de payer devant le tribunal (entreprendre.service-public.gouv.fr/vosdroits/F38156). Ces démarches dépassent ce guide.</li>
 </ol>
-<p><strong>Facture électronique.</strong> Selon la fiche F31808, l'émission de factures électroniques devient obligatoire pour les PME et les micro-entreprises à partir du 1er septembre 2027. Cela ne change pas la logique de ce guide : quel que soit votre outil de facturation, il vous faut savoir qui doit quoi et depuis quand.</p>
+<p><strong>Facture électronique.</strong> Depuis le 1er septembre 2026, toutes les entreprises doivent être en mesure de recevoir des factures électroniques (entreprendre.service-public.gouv.fr/actualites/A18953, publiée le 2 septembre 2026). Selon cette actualité et la fiche F31808, l'émission de factures électroniques devient obligatoire pour les PME et les micro-entreprises à partir du 1er septembre 2027. Cela ne change pas la logique de ce guide : quel que soit votre outil de facturation, il vous faut savoir qui doit quoi et depuis quand.</p>
 <h3>1.4 Les coordonnées de vos clients sont des données personnelles</h3>
 <p>Votre tableau contient des noms et des adresses email. Même chez un client entreprise, l'adresse d'une personne (prenom.nom@entreprise.fr) est une donnée personnelle au sens du RGPD (règlement général sur la protection des données). Avec ce montage, ces données sont stockées chez Google (Sheets et Gmail) et traitées chaque jour par Make, un service tiers qui agit pour votre compte, pour préparer les brouillons. La politique de confidentialité de Make prévoit des transferts possibles de données hors de l'Union européenne (make.com/en/privacy-notice). Aucune donnée de client n'est envoyée à Claude : vous ne lui donnez que des exemples inventés.</p>
 <p>Quatre réflexes simples, sans prétendre vous rendre conforme :</p>
@@ -149,7 +149,7 @@ footer{color:#64748B;font-size:.85em;text-align:center;padding:30px 18px}</style
 <tr>
 <td>D</td>
 <td>Montant TTC</td>
-<td>montant à payer, en nombre</td>
+<td>montant toutes taxes comprises (TTC), celui que le client doit payer, en nombre</td>
 </tr>
 <tr>
 <td>E</td>
@@ -181,7 +181,7 @@ footer{color:#64748B;font-size:.85em;text-align:center;padding:30px 18px}</style
 <ol>
 <li>Sélectionnez la colonne D en cliquant sur la lettre D, puis <strong>Format</strong>, <strong>Nombre</strong>, <strong>Devise</strong>.</li>
 <li>Sélectionnez les colonnes E et G, puis <strong>Format</strong>, <strong>Nombre</strong>, <strong>Date</strong>.</li>
-<li>Sélectionnez la colonne H, puis <strong>Format</strong>, <strong>Nombre</strong>, <strong>Nombre</strong>.</li>
+<li>Sélectionnez la colonne H, puis <strong>Format</strong>, <strong>Nombre</strong>, <strong>Format de nombre personnalisé</strong>. Tapez <code>0</code> dans la zone de texte et cliquez sur <strong>Appliquer</strong>. La colonne affichera des nombres entiers (10 et non 10,00).</li>
 </ol>
 <h3>2.3 La liste des statuts</h3>
 <ol>
@@ -209,8 +209,11 @@ footer{color:#64748B;font-size:.85em;text-align:center;padding:30px 18px}</style
 <pre><code class="language-modele">=SI(OU(E2=&quot;&quot;;F2=&quot;Payé&quot;;F2=&quot;Litige&quot;);&quot;&quot;;'Paramètres'!$B$1-E2)
 </code></pre>
 <p>Le résultat est le nombre de jours écoulés depuis l'échéance. Il est négatif tant que la facture n'est pas encore due, et vide pour une facture payée ou en litige.</p>
-<p><strong>L'action du jour.</strong> Tapez en I2 :</p>
-<pre><code class="language-modele">=SI(H2=&quot;&quot;;&quot;&quot;;SI(ET(F2=&quot;En attente&quot;;H2&gt;=7);&quot;Relance 1&quot;;SI(ET(F2=&quot;Relance 1&quot;;H2&gt;=15;'Paramètres'!$B$1-G2&gt;=7);&quot;Relance 2&quot;;SI(ET(F2=&quot;Relance 2&quot;;H2&gt;=30;'Paramètres'!$B$1-G2&gt;=9);&quot;Relance 3&quot;;&quot;&quot;))))
+<p><strong>L'action du jour.</strong> Cliquez sur I2, puis collez la formule ci-dessous dans la barre de formule (la zone au-dessus des colonnes), et non directement dans la case. Validez avec <strong>Entrée</strong>. Elle est présentée sur quatre lignes pour rester lisible : Google Sheets accepte ces retours à la ligne, qui tombent toujours après un point-virgule, jamais à l'intérieur d'un texte entre guillemets.</p>
+<pre><code class="language-formule">=SI(H2=&quot;&quot;;&quot;&quot;;
+SI(ET(F2=&quot;En attente&quot;;H2&gt;=7);&quot;Relance 1&quot;;
+SI(ET(F2=&quot;Relance 1&quot;;H2&gt;=15;'Paramètres'!$B$1-G2&gt;=7);&quot;Relance 2&quot;;
+SI(ET(F2=&quot;Relance 2&quot;;H2&gt;=30;'Paramètres'!$B$1-G2&gt;=9);&quot;Relance 3&quot;;&quot;&quot;))))
 </code></pre>
 <p>En clair : une facture « En attente » à 7 jours de retard ou plus appelle la relance 1 ; une facture déjà relancée une fois, à 15 jours ou plus, appelle la relance 2 ; à 30 jours ou plus, la relance 3. La condition sur la colonne G laisse au moins 7 jours entre le premier rappel et la relance ferme, et 9 jours entre la relance ferme et le dernier rappel, pour que le délai de 8 jours annoncé par le modèle 2 soit écoulé, même pour une facture saisie tardivement.</p>
 <p>Pour appliquer les formules à toutes les lignes :</p>
@@ -219,8 +222,8 @@ footer{color:#64748B;font-size:.85em;text-align:center;padding:30px 18px}</style
 <li>Sélectionnez H3 à I500, puis collez (Cmd V ou Ctrl V).</li>
 </ol>
 <blockquote>
-<p><strong>Vous devez voir</strong> : sur une ligne d'essai avec une échéance passée de 10 jours et le statut « En attente », 10 en colonne H et « Relance 1 » en colonne I. Passez le statut à « Payé » : H et I se vident.</p>
-<p><strong>Si ça ne marche pas</strong> : « #ERROR! » ou « Erreur d'analyse de formule » vient presque toujours du séparateur. Vérifiez que les paramètres régionaux sont sur France (section 2.1). Si H affiche une date au lieu d'un nombre, reformatez la colonne H en <strong>Nombre</strong>. Si « #VALUE! » apparaît, la date d'échéance a été tapée comme du texte : retapez-la au format 15/09/2026.</p>
+<p><strong>Vous devez voir</strong> : sur une ligne d'essai avec une échéance passée de 10 jours et le statut « En attente », 10 en colonne H et « Relance 1 » en colonne I. Second test, pour la relance ferme : passez l'échéance à 20 jours en arrière, le statut à « Relance 1 », et tapez en G une date antérieure de 8 jours à aujourd'hui : I doit afficher « Relance 2 ». Passez enfin le statut à « Payé » : H et I se vident.</p>
+<p><strong>Si ça ne marche pas</strong> : « #ERROR! » ou « Erreur d'analyse de formule » vient presque toujours du séparateur. Vérifiez que les paramètres régionaux sont sur France (section 2.1). Si H affiche une date au lieu d'un nombre, reformatez la colonne H avec le format personnalisé <code>0</code> (section 2.2, étape 3). Si « #VALUE! » apparaît, la date d'échéance a été tapée comme du texte : retapez-la au format 15/09/2026. Si le premier test réussit mais pas le second, la formule I2 a été coupée au milieu d'un texte au moment du collage : recollez-la dans la barre de formule.</p>
 </blockquote>
 <p><strong>Le seuil de 7, 15 et 30 jours</strong> est un choix courant, pas une règle. Vous pouvez remplacer ces nombres dans la formule I2 (puis recopier) ; la consigne 1 du chapitre 5 du guide complet vous aide à les choisir selon votre activité.</p>
 <h3>2.5 Repérer d'un coup d'œil</h3>
@@ -232,7 +235,7 @@ footer{color:#64748B;font-size:.85em;text-align:center;padding:30px 18px}</style
 <p>Les factures arrivées au dernier rappel amiable ressortent : ce sont celles qui demandent votre décision (chapitre 4 du guide complet).</p>
 <h3>2.6 Alimenter le tableau et la règle d'or</h3>
 <ul>
-<li><strong>Si votre logiciel de facturation exporte en CSV ou en Excel</strong> : importez l'export dans un onglet séparé (<strong>Fichier</strong>, <strong>Importer</strong>), puis copiez les colonnes utiles dans « Suivi ».</li>
+<li><strong>Si votre logiciel de facturation exporte en CSV (un fichier de tableau en texte simple, que tous les tableurs ouvrent) ou en Excel</strong> : importez l'export dans un onglet séparé (<strong>Fichier</strong>, <strong>Importer</strong>), puis copiez les colonnes utiles dans « Suivi ».</li>
 <li><strong>Sinon</strong> : ajoutez chaque facture à la main au moment où vous l'émettez, avec le statut « En attente ». Comptez 30 secondes par ligne.</li>
 </ul>
 <p><strong>La règle d'or : un paiement reçu, une ligne passée à « Payé », avant toute autre tâche.</strong> C'est le seul geste qui empêche une relance de partir vers un client qui a déjà payé. Une fois par semaine, à heure fixe, rapprochez vos encaissements de la colonne Statut.</p>
@@ -270,7 +273,7 @@ footer{color:#64748B;font-size:.85em;text-align:center;padding:30px 18px}</style
 <ul>
 <li>[ ] Paramètres régionaux sur France</li>
 <li>[ ] Onglets « Suivi » et « Paramètres » créés</li>
-<li>[ ] Colonnes A à I dans l'ordre, formats Devise, Date et Nombre appliqués</li>
+<li>[ ] Colonnes A à I dans l'ordre, formats Devise, Date et nombre entier (<code>0</code>) appliqués</li>
 <li>[ ] Menu déroulant des six statuts en colonne F</li>
 <li>[ ] <code>=AUJOURDHUI()</code> en B1 de « Paramètres »</li>
 <li>[ ] Formules H et I recopiées jusqu'à la ligne 500 et testées sur une ligne d'essai</li>
