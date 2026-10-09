@@ -19,6 +19,7 @@ Site : https://nexia-code.github.io/
 
 ## Les articles NEXIA
 
+- [Comment rédiger un compte rendu de réunion : plan, exemple type et modèle](https://nexia-code.github.io/articles/2026-10-09-rediger-compte-rendu-reunion/)
 - [Comment relancer une facture impayée : étapes, délais et modèle de relance](https://nexia-code.github.io/articles/2026-10-01-relancer-facture-impayee/)
 - [Mentions obligatoires d'un devis : la liste à vérifier avant d'envoyer](https://nexia-code.github.io/articles/2026-10-01-mentions-obligatoires-devis/)
 
