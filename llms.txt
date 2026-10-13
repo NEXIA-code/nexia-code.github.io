@@ -1,0 +1,30 @@
+# NEXIA
+
+> Guides pas à pas et articles pour mettre l'IA au travail dans une petite entreprise, sans savoir coder.
+
+## Guides
+
+- [Construisez l'outil dont votre entreprise a besoin, sans développeur](https://nexia-code.github.io/guides/outil-metier-sans-developpeur/) : Une base de données, un formulaire de saisie et des automatisations qui trient pour vous : construisez votre application interne sans agence ni développeur. Guide pas-à-pas de 29 pages, sans savoir coder.
+- [L'IA prépare vos emails, vous n'avez plus qu'à valider](https://nexia-code.github.io/guides/ia-prepare-vos-emails/) : Claude rédige vos emails délicats, résume votre boîte Gmail chaque matin et prépare vos brouillons de réponse, en trois niveaux et sans code. Guide PDF de 27 pages.
+- [Vos réunions se résument toutes seules](https://nexia-code.github.io/guides/reunions-resumees/) : Fireflies transcrit et résume vos visioconférences, Claude transforme vos notes en compte-rendu et vos réunions arrivent dans Notion avec leurs actions, en trois niveaux et sans code. Guide PDF de 24 pages.
+- [Le tableau de bord du dirigeant](https://nexia-code.github.io/guides/tableau-de-bord-dirigeant/) : Une veille concurrentielle avec Perplexity, un brief de trésorerie rédigé par Claude chaque vendredi et un tableau de bord Google Sheets et Data Studio, en trois niveaux et sans code. Guide PDF de 28 pages.
+- [Ne perdez plus une facture impayée](https://nexia-code.github.io/guides/relances-factures-impayees/) : Un tableau Google Sheets qui calcule les retards, des relances amiables préparées chaque matin dans Gmail par Make à partir de vos modèles, et une alerte quand le total en retard dépasse votre seuil, en trois niveaux et sans code. Guide PDF de 33 pages.
+- [Automatisez votre prise de rendez-vous](https://nexia-code.github.io/guides/prise-de-rendez-vous-automatisee/) : Un lien de réservation Cal.com relié à votre agenda, des questions et un rappel automatique, une fiche de préparation envoyée dans Gmail par Make, puis un tableau de suivi et un brouillon de reprogrammation après chaque absence, en trois niveaux et sans code. Guide PDF de 31 pages.
+- [Vos devis rédigés par l'IA à partir de vos notes](https://nexia-code.github.io/guides/devis-avec-ia/) : Transformez vos notes de visite en devis clair, à vos prix, avec Claude et Google Docs, en trois niveaux et sans logiciel payant. Guide PDF de 25 pages.
+
+## Offres
+
+- [Pack complet : les 7 guides NEXIA de l'IA au travail](https://nexia-code.github.io/pack/) : Les 7 guides pas-à-pas pour automatiser votre entreprise avec l'IA, sans coder.
+- [30 Prompts IA pour PME (gratuit)](https://nexia-code.github.io/gratuit/)
+
+## Articles
+
+- [Tableau de bord d'une TPE : quels indicateurs suivre chaque mois ?](https://nexia-code.github.io/articles/2026-10-12-indicateurs-tableau-de-bord-tpe/)
+- [Comment rédiger un compte rendu de réunion : plan, exemple type et modèle](https://nexia-code.github.io/articles/2026-10-09-rediger-compte-rendu-reunion/)
+- [Comment relancer une facture impayée : étapes, délais et modèle de relance](https://nexia-code.github.io/articles/2026-10-01-relancer-facture-impayee/)
+- [Mentions obligatoires d'un devis : la liste à vérifier avant d'envoyer](https://nexia-code.github.io/articles/2026-10-01-mentions-obligatoires-devis/)
+
+## Optional
+
+- [Flux RSS](https://nexia-code.github.io/flux.xml)
+- [Mentions légales](https://nexia-code.github.io/mentions-legales/)
