@@ -19,6 +19,7 @@
 
 ## Articles
 
+- [Rendez-vous non honoré : comment éviter les absences et que pouvez-vous facturer ?](https://nexia-code.github.io/articles/2026-10-15-rendez-vous-non-honore/)
 - [Tableau de bord d'une TPE : quels indicateurs suivre chaque mois ?](https://nexia-code.github.io/articles/2026-10-12-indicateurs-tableau-de-bord-tpe/)
 - [Comment rédiger un compte rendu de réunion : plan, exemple type et modèle](https://nexia-code.github.io/articles/2026-10-09-rediger-compte-rendu-reunion/)
 - [Comment relancer une facture impayée : étapes, délais et modèle de relance](https://nexia-code.github.io/articles/2026-10-01-relancer-facture-impayee/)
