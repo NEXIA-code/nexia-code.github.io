@@ -13,6 +13,7 @@ Site : https://nexia-code.github.io/
 - [Ne perdez plus une facture impayée](https://nexia-code.github.io/guides/relances-factures-impayees/)
 - [Automatisez votre prise de rendez-vous](https://nexia-code.github.io/guides/prise-de-rendez-vous-automatisee/)
 - [Vos devis rédigés par l'IA à partir de vos notes](https://nexia-code.github.io/guides/devis-avec-ia/)
+- [Répondre aux avis Google avec l'IA, le ton juste en quelques minutes](https://nexia-code.github.io/guides/repondre-avis-google-ia/)
 
 - [Pack complet : les 7 guides NEXIA de l'IA au travail](https://nexia-code.github.io/pack/)
 - [30 Prompts IA pour PME (gratuit)](https://nexia-code.github.io/gratuit/)

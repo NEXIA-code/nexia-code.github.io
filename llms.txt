@@ -11,6 +11,7 @@
 - [Ne perdez plus une facture impayée](https://nexia-code.github.io/guides/relances-factures-impayees/) : Un tableau Google Sheets qui calcule les retards, des relances amiables préparées chaque matin dans Gmail par Make à partir de vos modèles, et une alerte quand le total en retard dépasse votre seuil, en trois niveaux et sans code. Guide PDF de 33 pages.
 - [Automatisez votre prise de rendez-vous](https://nexia-code.github.io/guides/prise-de-rendez-vous-automatisee/) : Un lien de réservation Cal.com relié à votre agenda, des questions et un rappel automatique, une fiche de préparation envoyée dans Gmail par Make, puis un tableau de suivi et un brouillon de reprogrammation après chaque absence, en trois niveaux et sans code. Guide PDF de 31 pages.
 - [Vos devis rédigés par l'IA à partir de vos notes](https://nexia-code.github.io/guides/devis-avec-ia/) : Transformez vos notes de visite en devis clair, à vos prix, avec Claude et Google Docs, en trois niveaux et sans logiciel payant. Guide PDF de 25 pages.
+- [Répondre aux avis Google avec l'IA, le ton juste en quelques minutes](https://nexia-code.github.io/guides/repondre-avis-google-ia/) : Répondez à vos avis Google avec Claude, sur le bon ton et sans fait inventé, en trois niveaux et sans logiciel payant.
 
 ## Offres
 
